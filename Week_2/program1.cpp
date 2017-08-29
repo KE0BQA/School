@@ -12,8 +12,18 @@ using namespace std;
 
 int main()
 {
-	cout <<"Enter First Integer \n";
-	cout <<"Enter Second Integar \n";
-	cout <<"Available Operations are:\n 1.) Addition\n 2.) Subtraction\n 3.) Multiplication\n 4.) Division";
+	int firstIntegar;
+	int secondIntegar;
+	int operation;
+
+	cout <<"Enter First Integer: \n";
+	cin >> firstIntegar;
+
+	cout <<"Enter Second Integar: \n";
+	cin >> secondIntegar;
+
+	cout <<"Available Operations are:\n 1.) Addition\n 2.) Subtraction\n 3.) Multiplication\n 4.) Division \n Please Select a Number: \n";
+	cin >> operation;
+	
 	return 0;
 }
