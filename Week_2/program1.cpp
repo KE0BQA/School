@@ -41,18 +41,18 @@ int main()
 	if (operation == 2)
 		{
 			finalValue = firstIntegar - secondIntegar;
-			cout << finalValue;
+			cout << "Final Value is: "<< finalValue;
 		}
 	if (operation == 3)
 		{
 			finalValue = firstIntegar * secondIntegar;
-			cout <<  finalValue;
+			cout << "Final Value is: "<< finalValue;
 		
 		}
 	if (operation == 4)
 		{
 			finalValue = firstIntegar / secondIntegar;
-			cout <<  finalValue;	
+			cout << "Final Value is: "<< finalValue;
 		}
 	if (operation > 4)
 	{
