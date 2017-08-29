@@ -35,32 +35,28 @@ int main()
 	if (operation == 1)
 		{
 			finalValue = firstIntegar + secondIntegar;
-			cout << firstIntegar << " + " << secondIntegar << " = " << finalValue;
-			cout << "\n Final Value is: "<< finalValue <<"\n";
+			cout << firstIntegar << " + " << secondIntegar << " = " << finalValue <<"\n";
 		}
 
 	if (operation == 2)
 		{
 			finalValue = firstIntegar - secondIntegar;
-			cout << firstIntegar << " - " << secondIntegar << " = " << finalValue;
-			cout << "\n Final Value is: "<< finalValue <<"\n";
+			cout << firstIntegar << " - " << secondIntegar << " = " << finalValue <<"\n";
 		}
 	if (operation == 3)
 		{
 			finalValue = firstIntegar * secondIntegar;
-			cout << firstIntegar << " * " << secondIntegar << " = " << finalValue;
-			cout << "\n Final Value is: "<< finalValue <<"\n";
+			cout << firstIntegar << " * " << secondIntegar << " = " << finalValue <<"\n";
 		
 		}
 	if (operation == 4)
 		{
 			finalValue = firstIntegar / secondIntegar;
-			cout << firstIntegar << " / " << secondIntegar << " = " << finalValue;
-			cout << "\nFinal Value is: "<< finalValue <<"\n";
+			cout << firstIntegar << " / " << secondIntegar << " = " << finalValue <<"\n";
 		}
 	if (operation > 4 || operation < 1)
 	{
-	cout <<" \n Invalid Operation. Valid Choices were 1, 2, 3 or 4. Quitting Program";
+	cout <<" \n Invalid Operation. Valid Choices were 1, 2, 3 or 4. Quitting Program\n";
 	}
 
 	return 0;
