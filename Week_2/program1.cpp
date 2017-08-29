@@ -28,7 +28,7 @@ int main()
 
 	if (operation == 4 && secondIntegar == 0)
 		{
-			cout <<"Can Not Divide by Zero; Program Exiting";
+			cout <<"Can Not Divide by Zero; Program Exiting\n";
 			return 0;
 		}
 
