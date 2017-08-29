@@ -36,20 +36,20 @@ int main()
 		{
 			finalValue = firstIntegar + secondIntegar;
 			cout << firstIntegar << " + " << secondIntegar << " = " << finalValue;
-			cout << "\n Final Value is: "<< finalValue;
+			cout << "\n Final Value is: "<< finalValue <<"\n";
 		}
 
 	if (operation == 2)
 		{
 			finalValue = firstIntegar - secondIntegar;
 			cout << firstIntegar << " - " << secondIntegar << " = " << finalValue;
-			cout << "\n Final Value is: "<< finalValue;
+			cout << "\n Final Value is: "<< finalValue <<"\n";
 		}
 	if (operation == 3)
 		{
 			finalValue = firstIntegar * secondIntegar;
 			cout << firstIntegar << " * " << secondIntegar << " = " << finalValue;
-			cout << "\n Final Value is: "<< finalValue;
+			cout << "\n Final Value is: "<< finalValue <<"\n";
 		
 		}
 	if (operation == 4)
