@@ -24,6 +24,25 @@ int main()
 
 	cout <<"Available Operations are:\n 1.) Addition\n 2.) Subtraction\n 3.) Multiplication\n 4.) Division \n Please Select a Number: \n";
 	cin >> operation;
-	
+
+	if (operation == 1)
+	{
+		
+	}
+
+	if (operation == 2)
+	{
+		
+	}
+	if (operation == 3)
+	{
+		
+	}
+	if (operation == 4)
+	{
+		
+	}
+	if (operation > 4)
+	cout <<" \n Error Value greater than 4 Program Exiting";
 	return 0;
 }
