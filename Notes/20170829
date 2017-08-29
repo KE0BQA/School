@@ -1,5 +1,6 @@
 WLUG 1 Point Extra Credit x3 Meetings
 Email @End of Week "How is the teacher doing?" 2 Points Extra Credit
+Cplusplus.com
 
 Knowledge Probe Powerpoint
 	Reviewing answers
@@ -58,4 +59,38 @@ Some C++ Basics
 				\\ backslash
 				\" double quote
 					cout << "\" Call me Ishmael.\""
-
+		Input w/ cin
+		
+			int num;
+			cout << "Enter a number: ";
+			cin >> num;
+			
+			Insertion Operator is opposite direction
+			Reads until it encounters Whitespace
+	Expressions
+		Aritmetic
+				+ Addition
+				- Subtraction
+				* Multiplication
+				/ Division
+				% Remainder after division
+			Same Order of Operations
+			Integer Division
+				20/7 = 2
+				6/2 = 3
+			Double Division
+				20.0/7.0 = 2.85714
+				6.0/3.0 = 2.0
+		Compartative
+			Deal w/ Comparison
+				== Equality
+				!= Non-equality
+				< Less Than
+				> Greater Than
+				<= Less Than or Equal to
+				>= Greater Than or Equal to
+			Evaluate to 0 or 1
+			Used in flow control
+				!a 		NOT a
+				a && b 	a AND b
+				a||b a 	OR b
