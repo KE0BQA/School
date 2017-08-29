@@ -4,4 +4,58 @@ Email @End of Week "How is the teacher doing?" 2 Points Extra Credit
 Knowledge Probe Powerpoint
 	Reviewing answers
 
+Some C++ Basics
+	Variables
+		Programs Way of Naming/Storing
+		Data in Varaiable is the value
+		Variables ALWAYS have a value
+		Variables stored in memory
+	
+		How Do We Name Variables
+			Must Start with Letter or "_"
+			How Should we name variables?
+				Constistent Naming Scheme
+				Be Descriptive and Succinct
+		Variables start with lowercase
+	
+		C++ is Case Sensitive
+		Variable Declaration
+			Must be declared
+				Specific Way
+					<TYPE> <NAME> [= INITIAL VALUE];
+					int numBoxes;
+					int numBoxes = 0;
+					double meanBoxes;
+		Variable Types
+			Integer -> Int
+				int one, two = 2, three;
+			Double-precision floating point -> double
+				15 Decimal Points
+			Character -> char
+				single characters only single quotes needed
+					char boxType = 'c';
+				Also interpreted as small integers
+					'A' == 65
+					'a' == 97
+			Boolean -> bool
+				Holds one of 2 values (1 or 0)
+			Strings -> strings
+				Not a native data type
+				Implemented as a class
+				Discussed later
+	Input and Output
+		Input/Output are carreid to and from the program in streams
+		For Now
+			Input = Keyboard
+			Output = Screen
+		Output w/ cout
+			see Hello_World files
+			<< is the insertion operator
+		Special characters
+			Start w/ \
+				\n new
+				\t horizontal tab
+				\\ backslash
+				\" double quote
+					cout << "\" Call me Ishmael.\""
 
