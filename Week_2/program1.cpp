@@ -15,6 +15,7 @@ int main()
 	int firstIntegar;
 	int secondIntegar;
 	int operation;
+	int finalValue = 0;
 
 	cout <<"Enter First Integer: \n";
 	cin >> firstIntegar;
@@ -25,24 +26,39 @@ int main()
 	cout <<"Available Operations are:\n 1.) Addition\n 2.) Subtraction\n 3.) Multiplication\n 4.) Division \n Please Select a Number: \n";
 	cin >> operation;
 
+	if (operation == 4 && secondIntegar == 0)
+		{
+			cout <<"Divide by Zero Program Exiting";
+			return 0;
+		}
+
 	if (operation == 1)
-	{
-		
-	}
+		{
+			finalValue = firstIntegar + secondIntegar;
+			cout << finalValue;
+		}
 
 	if (operation == 2)
-	{
-		
-	}
+		{
+			finalValue = firstIntegar - secondIntegar;
+			cout << finalValue;
+		}
 	if (operation == 3)
-	{
+		{
+			finalValue = firstIntegar * secondIntegar;
+			cout <<  finalValue;
 		
-	}
+		}
 	if (operation == 4)
-	{
-		
-	}
+		{
+			finalValue = firstIntegar / secondIntegar;
+			cout <<  finalValue;	
+		}
 	if (operation > 4)
-	cout <<" \n Error Value greater than 4 Program Exiting";
+	{
+	cout <<" \n Error Value is Greater Than 4 Program Exiting";
+	}
+
 	return 0;
 }
+
