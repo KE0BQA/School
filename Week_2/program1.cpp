@@ -56,7 +56,7 @@ int main()
 		{
 			finalValue = firstIntegar / secondIntegar;
 			cout << firstIntegar << " / " << secondIntegar << " = " << finalValue;
-			cout << "\n Final Value is: "<< finalValue;
+			cout << "\nFinal Value is: "<< finalValue <<"\n";
 		}
 	if (operation > 4 || operation < 1)
 	{
