@@ -77,20 +77,24 @@ Some C++ Basics
 			Same Order of Operations
 			Integer Division
 				20/7 = 2
-				6/2 = 3
+				6/2	 = 3
 			Double Division
 				20.0/7.0 = 2.85714
-				6.0/3.0 = 2.0
+				6.0/3.0	 = 2.0
 		Compartative
 			Deal w/ Comparison
-				== Equality
-				!= Non-equality
-				< Less Than
-				> Greater Than
-				<= Less Than or Equal to
-				>= Greater Than or Equal to
+				== 	Equality
+				!= 	Non-equality
+				< 	Less Than
+				> 	Greater Than
+				<= 	Less Than or Equal to
+				>= 	Greater Than or Equal to
 			Evaluate to 0 or 1
 			Used in flow control
 				!a 		NOT a
 				a && b 	a AND b
 				a||b a 	OR b
+		Assignment
+			Carried out w/ = operator
+			= 	assigns value
+			== 	compares 2 values
