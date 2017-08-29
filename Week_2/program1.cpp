@@ -31,13 +31,11 @@ int main()
 			cout <<"Can Not Divide by Zero; Program Exiting\n";
 			return 0;
 		}
-
 	if (operation == 1)
 		{
 			finalValue = firstIntegar + secondIntegar;
 			cout << firstIntegar << " + " << secondIntegar << " = " << finalValue <<"\n";
 		}
-
 	if (operation == 2)
 		{
 			finalValue = firstIntegar - secondIntegar;
@@ -47,7 +45,6 @@ int main()
 		{
 			finalValue = firstIntegar * secondIntegar;
 			cout << firstIntegar << " * " << secondIntegar << " = " << finalValue <<"\n";
-		
 		}
 	if (operation == 4)
 		{
