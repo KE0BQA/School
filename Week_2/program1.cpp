@@ -17,46 +17,50 @@ int main()
 	int operation;
 	int finalValue = 0;
 
-	cout <<"Enter First Integer: \n";
+	cout <<"Enter The First Integer: \n";
 	cin >> firstIntegar;
 
-	cout <<"Enter Second Integar: \n";
+	cout <<"Enter The Second Integar: \n";
 	cin >> secondIntegar;
 
-	cout <<"Available Operations are:\n 1.) Addition\n 2.) Subtraction\n 3.) Multiplication\n 4.) Division \n Please Select a Number: \n";
+	cout <<"Available Operations are:\n\t1.) Addition\n\t2.) Subtraction\n\t3.) Multiplication\n\t4.) Division \nPlease Select a Number: \n";
 	cin >> operation;
 
 	if (operation == 4 && secondIntegar == 0)
 		{
-			cout <<"Divide by Zero Program Exiting";
+			cout <<"Can Not Divide by Zero; Program Exiting";
 			return 0;
 		}
 
 	if (operation == 1)
 		{
 			finalValue = firstIntegar + secondIntegar;
-			cout << "Final Value is: "<< finalValue;
+			cout << firstIntegar << " + " << secondIntegar << " = " << finalValue;
+			cout << "\n Final Value is: "<< finalValue;
 		}
 
 	if (operation == 2)
 		{
 			finalValue = firstIntegar - secondIntegar;
-			cout << "Final Value is: "<< finalValue;
+			cout << firstIntegar << " - " << secondIntegar << " = " << finalValue;
+			cout << "\n Final Value is: "<< finalValue;
 		}
 	if (operation == 3)
 		{
 			finalValue = firstIntegar * secondIntegar;
-			cout << "Final Value is: "<< finalValue;
+			cout << firstIntegar << " * " << secondIntegar << " = " << finalValue;
+			cout << "\n Final Value is: "<< finalValue;
 		
 		}
 	if (operation == 4)
 		{
 			finalValue = firstIntegar / secondIntegar;
-			cout << "Final Value is: "<< finalValue;
+			cout << firstIntegar << " / " << secondIntegar << " = " << finalValue;
+			cout << "\n Final Value is: "<< finalValue;
 		}
-	if (operation > 4)
+	if (operation > 4 || operation < 1)
 	{
-	cout <<" \n Error Value is Greater Than 4 Program Exiting";
+	cout <<" \n Invalid Operation. Valid Choices were 1, 2, 3 or 4. Quitting Program";
 	}
 
 	return 0;
