@@ -13,24 +13,24 @@ using namespace std;
 
 int main()
 {
-	int firstIntegar;
-	int secondIntegar;
+	int firstInteger;
+	int secondInteger;
 	int operation;
 	int  finalValue = 0;
 
 	cout <<"This Program will prompt for two integers and an operation and then display the result of applying the operation to the numbers\n";
 	
 	cout <<"Enter The First Integer:\n";
-	cin >> firstIntegar;
+	cin >> firstInteger;
 
-	cout <<"Enter The Second Integar:\n";
-	cin >> secondIntegar;
+	cout <<"Enter The Second Integer:\n";
+	cin >> secondInteger;
 
 	cout <<"Available Operations are:\n\t1.) Addition\n\t2.) Subtraction\n\t3.) Multiplication\n\t4.) Division\nPlease Select a Number:\n";
 	cin >> operation;
 
 	//Preventing Divide by 0
-	if (operation == 4 && secondIntegar == 0) {
+	if (operation == 4 && secondInteger == 0) {
 		cout <<"Can Not Divide by Zero; Program Exiting\n";
 		return 0;
 	}
@@ -42,17 +42,17 @@ int main()
 	}
 
 	if (operation == 1)	{
-		finalValue = firstIntegar + secondIntegar;
-		cout << firstIntegar << " + " << secondIntegar << " = " << finalValue <<"\n";
+		finalValue = firstInteger + secondInteger;
+		cout << firstInteger << " + " << secondInteger << " = " << finalValue <<"\n";
 	} else if (operation == 2) {
-		finalValue = firstIntegar - secondIntegar;
-		cout << firstIntegar << " - " << secondIntegar << " = " << finalValue <<"\n";
+		finalValue = firstInteger - secondInteger;
+		cout << firstInteger << " - " << secondInteger << " = " << finalValue <<"\n";
 	} else if (operation == 3) {
-		finalValue = firstIntegar * secondIntegar;
-		cout << firstIntegar << " * " << secondIntegar << " = " << finalValue <<"\n";
+		finalValue = firstInteger * secondInteger;
+		cout << firstInteger << " * " << secondInteger << " = " << finalValue <<"\n";
 	} else if (operation == 4) {
-		finalValue = firstIntegar / secondIntegar;
-		cout << firstIntegar << " / " << secondIntegar << " = " << finalValue <<"\n";
+		finalValue = firstInteger / secondInteger;
+		cout << firstInteger << " / " << secondInteger << " = " << finalValue <<"\n";
 	}
 	return 0;
 }
