@@ -12,8 +12,8 @@ using namespace std;
 
 int main()
 {
-	double firstIntegar;
-	double secondIntegar;
+	int firstIntegar;
+	int secondIntegar;
 	int operation;
 	double finalValue = 0;
 
