@@ -17,13 +17,13 @@ int main()
 	int operation;
 	double finalValue = 0;
 
-	cout <<"Enter The First Integer: \n";
+	cout <<"Enter The First Integer:\n";
 	cin >> firstIntegar;
 
-	cout <<"Enter The Second Integar: \n";
+	cout <<"Enter The Second Integar:\n";
 	cin >> secondIntegar;
 
-	cout <<"Available Operations are:\n\t1.) Addition\n\t2.) Subtraction\n\t3.) Multiplication\n\t4.) Division \nPlease Select a Number: \n";
+	cout <<"Available Operations are:\n\t1.) Addition\n\t2.) Subtraction\n\t3.) Multiplication\n\t4.) Division\nPlease Select a Number:\n";
 	cin >> operation;
 
 	if (operation == 4 && secondIntegar == 0)
