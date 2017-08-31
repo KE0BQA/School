@@ -29,13 +29,14 @@ int main()
 
 	//Preventing Divide by 0
 	if (operation == 4 && secondIntegar == 0) {
-			cout <<"Can Not Divide by Zero; Program Exiting\n";
-			return 0;
+		cout <<"Can Not Divide by Zero; Program Exiting\n";
+		return 0;
 	}
 
 	//Preventing Invalid Operations
 	if (operation > 4 || operation < 1){
 		cout <<" \n Invalid Operation. Valid Choices were 1, 2, 3 or 4. Quitting Program\n";
+		return 0;
 	}
 
 	if (operation == 1)	{
