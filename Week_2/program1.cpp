@@ -52,9 +52,9 @@ int main()
 			cout << firstIntegar << " / " << secondIntegar << " = " << finalValue <<"\n";
 		}
 	if (operation > 4 || operation < 1)
-	{
-	cout <<" \n Invalid Operation. Valid Choices were 1, 2, 3 or 4. Quitting Program\n";
-	}
+		{
+		cout <<" \n Invalid Operation. Valid Choices were 1, 2, 3 or 4. Quitting Program\n";
+		}
 
 	return 0;
 }
