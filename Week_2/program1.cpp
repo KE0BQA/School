@@ -15,7 +15,7 @@ int main()
 	int firstIntegar;
 	int secondIntegar;
 	int operation;
-	double finalValue = 0;
+	int finalValue = 0;
 
 	cout <<"Enter The First Integer:\n";
 	cin >> firstIntegar;
