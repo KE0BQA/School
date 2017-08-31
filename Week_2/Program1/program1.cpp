@@ -16,8 +16,10 @@ int main()
 	int firstIntegar;
 	int secondIntegar;
 	int operation;
-	int finalValue = 0;
+	int  finalValue = 0;
 
+	cout <<"This Program will prompt for two integers and an operation and then display the result of applying the operation to the numbers\n";
+	
 	cout <<"Enter The First Integer:\n";
 	cin >> firstIntegar;
 
