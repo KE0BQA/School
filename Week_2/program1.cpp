@@ -40,26 +40,16 @@ int main()
 		cout <<" \n Invalid Operation. Valid Choices were 1, 2, 3 or 4. Quitting Program\n";
 		}
 
-	if (operation == 1)
-		{
+	if (operation == 1)	{
 			finalValue = firstIntegar + secondIntegar;
 			cout << firstIntegar << " + " << secondIntegar << " = " << finalValue <<"\n";
-		}
-
-	if (operation == 2)
-		{
+		} else if (operation == 2) {
 			finalValue = firstIntegar - secondIntegar;
 			cout << firstIntegar << " - " << secondIntegar << " = " << finalValue <<"\n";
-		}
-
-	if (operation == 3)
-		{
+		} else if (operation == 3) {
 			finalValue = firstIntegar * secondIntegar;
 			cout << firstIntegar << " * " << secondIntegar << " = " << finalValue <<"\n";
-		}
-
-	if (operation == 4)
-		{
+		} else if (operation == 4) {
 			finalValue = firstIntegar / secondIntegar;
 			cout << firstIntegar << " / " << secondIntegar << " = " << finalValue <<"\n";
 		}
