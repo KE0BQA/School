@@ -12,10 +12,10 @@ using namespace std;
 
 int main()
 {
-	int firstIntegar;
-	int secondIntegar;
+	double firstIntegar;
+	double secondIntegar;
 	int operation;
-	int finalValue = 0;
+	double finalValue = 0;
 
 	cout <<"Enter The First Integer: \n";
 	cin >> firstIntegar;
@@ -58,4 +58,3 @@ int main()
 
 	return 0;
 }
-
