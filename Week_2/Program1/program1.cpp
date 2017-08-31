@@ -28,31 +28,28 @@ int main()
 	cin >> operation;
 
 	//Preventing Divide by 0
-	if (operation == 4 && secondIntegar == 0)
-		{
+	if (operation == 4 && secondIntegar == 0) {
 			cout <<"Can Not Divide by Zero; Program Exiting\n";
 			return 0;
-		}
+	}
 
 	//Preventing Invalid Operations
-	if (operation > 4 || operation < 1)
-		{
+	if (operation > 4 || operation < 1){
 		cout <<" \n Invalid Operation. Valid Choices were 1, 2, 3 or 4. Quitting Program\n";
-		}
+	}
 
 	if (operation == 1)	{
-			finalValue = firstIntegar + secondIntegar;
-			cout << firstIntegar << " + " << secondIntegar << " = " << finalValue <<"\n";
-		} else if (operation == 2) {
-			finalValue = firstIntegar - secondIntegar;
-			cout << firstIntegar << " - " << secondIntegar << " = " << finalValue <<"\n";
-		} else if (operation == 3) {
-			finalValue = firstIntegar * secondIntegar;
-			cout << firstIntegar << " * " << secondIntegar << " = " << finalValue <<"\n";
-		} else if (operation == 4) {
-			finalValue = firstIntegar / secondIntegar;
-			cout << firstIntegar << " / " << secondIntegar << " = " << finalValue <<"\n";
-		}
-
+		finalValue = firstIntegar + secondIntegar;
+		cout << firstIntegar << " + " << secondIntegar << " = " << finalValue <<"\n";
+	} else if (operation == 2) {
+		finalValue = firstIntegar - secondIntegar;
+		cout << firstIntegar << " - " << secondIntegar << " = " << finalValue <<"\n";
+	} else if (operation == 3) {
+		finalValue = firstIntegar * secondIntegar;
+		cout << firstIntegar << " * " << secondIntegar << " = " << finalValue <<"\n";
+	} else if (operation == 4) {
+		finalValue = firstIntegar / secondIntegar;
+		cout << firstIntegar << " / " << secondIntegar << " = " << finalValue <<"\n";
+	}
 	return 0;
 }
