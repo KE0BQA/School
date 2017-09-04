@@ -44,15 +44,19 @@ int main()
 	if (operation == 1)	{
 		finalValue = firstInteger + secondInteger;
 		cout << firstInteger << " + " << secondInteger << " = " << finalValue <<"\n";
+		return 0;
 	} else if (operation == 2) {
 		finalValue = firstInteger - secondInteger;
 		cout << firstInteger << " - " << secondInteger << " = " << finalValue <<"\n";
+		return 0;
 	} else if (operation == 3) {
 		finalValue = firstInteger * secondInteger;
 		cout << firstInteger << " * " << secondInteger << " = " << finalValue <<"\n";
+		return 0;
 	} else if (operation == 4) {
 		finalValue = firstInteger / secondInteger;
 		cout << firstInteger << " / " << secondInteger << " = " << finalValue <<"\n";
+		return 0;
 	}
 	return 0;
 }
