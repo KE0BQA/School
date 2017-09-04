@@ -6,16 +6,16 @@ int main()
 	int secondInteger;
 	int operation;
 
-	std::cout <<"This program will prompt for two integers and an operationa dn then display the result of applying the operation to the number\n";
+	std::cout <<"This program will prompt for two integers and an operation and then display the result of applying the operation to the number\n";
 
 	std::cout <<"Enter the First Integer:\n";
-	cin >> firstInteger;
+	std::cin >> firstInteger;
 
-	std::cout <<"Enter the Second Integer:\n"
-	cin >> secondInteger;
+	std::cout <<"Enter the Second Integer:\n";
+	std::cin >> secondInteger;
 
 	std::cout <<"Available Operations are:\n\t1.) Addition\n\t2.) Subtraction\n\t3.) Multiplication\n\t4.) Division\nPlease Select a Number:\n";
-	cin >> operation
+	std::cin >> operation;
 
 	//Preventing Divide by 0
 	if (operation == 4 && secondInteger == 0) {
@@ -29,4 +29,11 @@ int main()
 		return 0;
 	}
 
-	case 1: 
+	case 1:
+		
+	case 2:
+		
+	case 3:
+		
+	case 4:
+		
