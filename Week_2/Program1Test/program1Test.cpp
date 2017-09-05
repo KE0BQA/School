@@ -28,12 +28,21 @@ int main()
 		std::cout <<"\n Invalid Operation. Valid Operations were 1,2,3 or 4, Quitting Program\n";
 		return 0;
 	}
+	switch (operation) {
+		case '1':
+	
+			break;
+		case '2':
 
-	case 1:
-		
-	case 2:
-		
-	case 3:
-		
-	case 4:
-		
+			break;
+		case '3':
+
+			break;
+		case '4':
+
+			break;
+		default: 
+			std::cout << "Not a Valid Operation\n";
+	}
+return 0:
+}
