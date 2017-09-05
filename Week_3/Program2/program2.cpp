@@ -14,14 +14,12 @@ using namespace std;
 
 int main()
 {
-	std::cout <<"\n";
-
-	//Triangle
+	//Triangle (Fix ME!)
 	int a=0, b=0, NUM=3;
 
 	for (a = -NUM; a <= NUM; a++) {
 		for (b = -NUM; b <= NUM; b++) {
-			if ( abs(a)+abs(b)<=NUM)
+			if ( (abs(a)+abs(b)<=NUM) )
 				{std::cout <<"#";}
 			else
 				{std::cout <<" ";}
