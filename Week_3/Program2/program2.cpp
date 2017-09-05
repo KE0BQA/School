@@ -10,58 +10,63 @@
 #include <cmath>
 #include <iostream>
 
+using namespace std;
+
 int main()
 {
-	//std::cout <<"\n";
+	std::cout <<"\n";
 
-/*	//Triangle
-	int a=0, b=0, NUM=8;
+	//Triangle
+	int a=0, b=0, NUM=3;
 
 	for (a = -NUM; a <= NUM; a++) {
 		for (b = -NUM; b <= NUM; b++) {
-			if ( abs(a)+abs(b)<=NUM) {
-				std::cout <<"#";
-			} else {
-				std::cout <<" ";
+			if ( abs(a)+abs(b)<=NUM)
+				{std::cout <<"#";}
+			else
+				{std::cout <<" ";}
 			}
-		}
+		cout<<endl;
 	}
 	std::cout <<"\n";
-*/	//Triangle
+	//Triangle
 
-	//std::cout <<"\n";
+	std::cout <<"\n";
 
 	//Diamond
-	int i=0, j=0, NUM=3;
+	int c=0, d=0, NUM1=3;
 
-	for (i = -NUM; i <= NUM; i++){
-		for (j = -NUM; j <= NUM; j++){
-			if ( (abs(i) + abs(j)) <= NUM)
+	for (c = -NUM1; c <= NUM1; c++){
+		for (d = -NUM1; d <= NUM1; d++){
+			if ( (abs(c) + abs(d)) <= NUM1)
 				{std::cout<<"#";}
 			else 
 				{std::cout<<" ";}
 			}
+		cout<<endl;
 	}
-	//std::cout <<"\n";
+	std::cout <<"\n";
 	//Diamond
 
-/*	std::cout <<"\n";
+	std::cout <<"\n";
 
 	//X-Shape
-	int e=0, f=0, NUM2=4;
+
+	int e=0, f=0, NUM2=3;
 
 	for (e=-NUM2; e<=NUM2; e++) {
 		for (f=-NUM2; f<=NUM2; f++) {
-			if( (abs (e) == abs (f))<=NUM2){
+			if( (abs (e) == abs (f))){ 
 				std::cout <<"#";
 			} else {
 				std::cout <<" ";
 			}
 		}
+	cout<<endl;
+
 	}
 	std::cout <<"\n";
 	//X-Shape
-*/
 
 	return 0;
 }
