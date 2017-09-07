@@ -24,7 +24,7 @@ int main()
 	}
 	//Triangle
 
-	std::cout <<"\n";
+	cout <<"\n";
 
 	//Diamond
 	for (int c = 7; c >= 1;  c--) {
@@ -37,7 +37,7 @@ int main()
 	}
 	//Diamond
 
-	std::cout <<"\n\n";
+	cout <<"\n\n";
 
 	//X-Shape
 	int e=0, f=0, NUM2=3;
@@ -45,12 +45,12 @@ int main()
 	for (e = -NUM2; e <= NUM2; e++) {
 		for (f = -NUM2; f <= NUM2; f++) {
 			if( (abs (e) == abs (f))) { 
-				std::cout <<"#";
+				cout <<"#";
 			} else {
-				std::cout <<" ";
+				cout <<" ";
 			}
 		}
-	std::cout<<endl;
+	cout<<endl;
 	}
 	//X-Shape
 
