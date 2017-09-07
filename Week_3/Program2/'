@@ -13,7 +13,7 @@ using namespace std;
 
 int main()
 {
-	//Triangle
+	//Triangle (Fix ME!)
 	for (int c = 0; c <= 4;  c++) {
 		for (int b = c; b > 0; b--) {
 			cout << " ";
@@ -26,7 +26,7 @@ int main()
 
 	std::cout <<"\n";
 
-	//Diamond
+	//Diamond (Fix ME!)
 	for (int c = 7; c >= 1;  c--) {
 		for (int b = (abs(4 - c)); b > 0; b--) {
 			cout << " ";
@@ -39,7 +39,7 @@ int main()
 
 	std::cout <<"\n\n";
 
-	//X-Shape
+	//X-Shape (Works)
 	int e=0, f=0, NUM2=3;
 
 	for (e = -NUM2; e <= NUM2; e++) {
