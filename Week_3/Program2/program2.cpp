@@ -1,7 +1,6 @@
 /*
 	program2.cpp
 	Dyllan Uplinger
-	20170905
 	J633V226
 	Homework #02
 	Draw to the terminal 3 shapes
@@ -19,11 +18,12 @@ int main()
 
 	for (a = -NUM; a <= NUM; a++) {
 		for (b = -NUM; b <= NUM; b++) {
-			if ( (abs(a)+abs(b)<=NUM) )
-				{std::cout <<"#";}
-			else
-				{std::cout <<" ";}
+			if ( (abs(a)+abs(b)<=NUM) ) {
+				std::cout <<"#";
+			} else {
+				std::cout <<" ";
 			}
+		}
 		cout<<endl;
 	}
 	std::cout <<"\n";
@@ -36,11 +36,12 @@ int main()
 
 	for (c = -NUM1; c <= NUM1; c++){
 		for (d = -NUM1; d <= NUM1; d++){
-			if ( (abs(c) + abs(d)) <= NUM1)
-				{std::cout<<"#";}
-			else 
-				{std::cout<<" ";}
+			if ( (abs(c) + abs(d)) <= NUM1) {
+				std::cout<<"#";
+			} else { 
+				std::cout<<" ";
 			}
+		}
 		cout<<endl;
 	}
 	std::cout <<"\n";
@@ -54,18 +55,18 @@ int main()
 
 	for (e=-NUM2; e<=NUM2; e++) {
 		for (f=-NUM2; f<=NUM2; f++) {
-			if( (abs (e) == abs (f))){ 
+			if( (abs (e) == abs (f))) { 
 				std::cout <<"#";
 			} else {
 				std::cout <<" ";
 			}
 		}
 	cout<<endl;
-
 	}
+	
 	std::cout <<"\n";
+
 	//X-Shape
 
 	return 0;
 }
-
