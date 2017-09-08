@@ -17,7 +17,7 @@ int main()
 	for (int c = 0; c <= 4;  c++) {
 		for (int b = c; b > 0; b--) {
 			cout << " ";
-		} for ( int k = (2* (4 - c)); k >= 1; k--){
+		} for (int k = (2* (4 - c)); k >= 1; k--) {
 			cout<<"#";
 		}
 	cout << endl;
@@ -30,7 +30,7 @@ int main()
 	for (int c = 7; c >= 1;  c--) {
 		for (int b = (abs(4 - c)); b > 0; b--) {
 			cout << " ";
-		} for (int k = (2 * (4 - abs (4 - c))); k >= 1; k--){
+		} for (int k = (2 * (4 - abs (4 - c))); k >= 1; k--) {
 			cout<<"#";
 		}
 	cout << endl;
