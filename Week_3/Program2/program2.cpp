@@ -52,7 +52,6 @@ int main()
 		}
 	cout<<endl;
 	}
-	//X-Shape
 
 	return 0;
 }
