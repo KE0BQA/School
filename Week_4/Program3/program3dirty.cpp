@@ -65,12 +65,11 @@ double printToScreen(double loanAmount_2, double interest_2, double payment_2) {
 		for (int month = 1; month <= 12; month++) {
 			cout << setw(10)  << month << setw(16) << calculateMonthlyInterest(loanAmount_2, interest_2); 
 			cout << setw(25) << (payment_2 - calculateMonthlyInterest(loanAmount_2, interest_2));
+			//yearlyBalance = (loanAmount_2 - yearlyPrincipal);
 			yearlyPrincipal = (yearlyPrincipal + (payment_2 - calculateMonthlyInterest(loanAmount_2, interest_2)));
 			yearlyInterest = (yearlyInterest + (calculateMonthlyInterest(loanAmount_2, interest_2)));
-			yearlyBalance = (loanAmount_2 - yearlyPrincipal);
 			loanAmount_2 = loanAmount_2 + calculateMonthlyInterest(loanAmount_2, interest_2);
 			loanAmount_2 = loanAmount_2 - payment_2;
-			//yearlyBalance = (loanAmount_2 - yearlyPrincipal);
 			cout << endl;
 		}
 			
