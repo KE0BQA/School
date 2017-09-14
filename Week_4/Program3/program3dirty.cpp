@@ -17,7 +17,6 @@
 	8. Calculate Total Yearly Balance Remaining 
 */
 
-#include <cmath>
 #include <iostream>
 #include <iomanip>
 
@@ -42,11 +41,6 @@ int main(void)
 	cout << "Interest Rate:\n";
 	cin >> interest_1;
 	interest_1 = interest_1 / 100;
-	if (interest_1 > 1 || interest_1 < 0) {
-		cout<<"Invalid Interest Rate\n";
-		return 0;
-	}
-	cout << interest_1 << "\n";
 
 	cout << "Monthly Payment:\n";
 	cin >> payment_1;
@@ -60,22 +54,30 @@ int main(void)
 
 double printToScreen(double loanAmount_2, double interest_2, double payment_2) {
 	for (int year = 1; year <= 3; year++) {
+			double yearlyPrincipal = 0;
+			double yearlyInterest = 0;
+			double yearlyBalance = 0;
 			cout << "Year " << year << setw(20) << "Interest" << setw(25) << "Principal";
 			cout << endl;
 			cout << setw(10) << "---" << setw(16) <<  "--------" << setw(25) << "---------";
 			cout<<endl;
-			double yearlyPrincipal = 0;
+
 		for (int month = 1; month <= 12; month++) {
-			cout << setw(10)  << month << setw(16) << calculateMonthlyInterest(loanAmount_2, interest_2)  << setw(25) << (payment_2 - calculateMonthlyInterest(loanAmount_2, interest_2));
+			cout << setw(10)  << month << setw(16) << calculateMonthlyInterest(loanAmount_2, interest_2); 
+			cout << setw(25) << (payment_2 - calculateMonthlyInterest(loanAmount_2, interest_2));
 			yearlyPrincipal = (yearlyPrincipal + (payment_2 - calculateMonthlyInterest(loanAmount_2, interest_2)));
+			yearlyInterest = (yearlyInterest + (calculateMonthlyInterest(loanAmount_2, interest_2)));
+			yearlyBalance = (loanAmount_2 - yearlyPrincipal);
 			loanAmount_2 = loanAmount_2 + calculateMonthlyInterest(loanAmount_2, interest_2);
 			loanAmount_2 = loanAmount_2 - payment_2;
+			//yearlyBalance = (loanAmount_2 - yearlyPrincipal);
 			cout << endl;
 		}
+			
 			cout << setw(10) << "---" << setw(16) <<  "--------" << setw(25) << "---------" << endl;
 			cout << endl;
-			cout << "Year " << year << " Totals: " << setw(16) << "yearlyInterestTotal" << setw(18) << yearlyPrincipal <<endl;
-			cout << "Remaining Balance at year end:" << setw(21) << "yearlyBalanceTotal" << endl;
+			cout << "Year " << year << " Totals: " << setw(11) << yearlyInterest << setw(25) << yearlyPrincipal <<endl;
+			cout << "Remaining Balance at year end:" << setw(21) << yearlyBalance << endl <<endl;
 	}
 	return 0;
 }
