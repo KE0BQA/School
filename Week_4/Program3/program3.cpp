@@ -30,7 +30,7 @@ int main(void)
 	double yearlyPrincipal = 0;
 	double yearlyInterest = 0;
 	double yearlyBalance = 0;
-	//double monthlyInterest = 0;
+	double monthlyInterest = 0;
 
 	cout.setf(ios::fixed);
 	cout.setf(ios::showpoint);
@@ -50,30 +50,20 @@ int main(void)
 			cout << "Year " << year << setw(20) << "Interest" << setw(25) << "Principal";
 			cout << endl;
 			cout << setw(10) << "---" << setw(16) << "--------" << setw(25) << "---------";
-			cout<<endl;
+			cout << endl;
 
 		for (int month = 1; month <= 12; month++) {
-			double monthlyInterest = 0;
 			monthlyInterest = (loanAmount * (interest / 12));
-			yearlyBalance = (loanAmount - yearlyPrincipal);
 			yearlyPrincipal = (yearlyPrincipal + (payment - monthlyInterest));
+			yearlyBalance = (loanAmount - yearlyPrincipal);
 			yearlyInterest = (yearlyInterest + monthlyInterest);
-			//yearlyBalance = (loanAmount - yearlyPrincipal);
-			//yearlyPrincipal = (yearlyPrincipal + (payment - monthlyInterest));
-			//yearlyInterest = (yearlyInterest + monthlyInterest);
 			cout << setw(10) << month << setw(16) << monthlyInterest; 
 			cout << setw(25) << (payment - monthlyInterest);
-			//yearlyBalance = (loanAmount - yearlyPrincipal);
-			//yearlyPrincipal = (yearlyPrincipal + (payment - monthlyInterest));
-			//yearlyInterest = (yearlyInterest + monthlyInterest);
 			loanAmount = (loanAmount + monthlyInterest);
 			loanAmount = (loanAmount - payment);
-			//yearlyBalance = (loanAmount - yearlyPrincipal);
-			//yearlyPrincipal = (yearlyPrincipal + (payment - monthlyInterest));
-			//yearlyInterest = (yearlyInterest + monthlyInterest);
 			cout << endl;
 		}
-			
+			cout 
 			cout << setw(10) << "---" << setw(16) << "--------" << setw(25) << "---------" << endl;
 			cout << endl;
 			cout << "Year " << year << " Totals: " << setw(11) << yearlyInterest << setw(25) << yearlyPrincipal <<endl;
