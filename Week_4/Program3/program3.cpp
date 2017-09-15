@@ -43,7 +43,7 @@ int main() {
   cout << "Monthly Payment:\n";
   cin >> monthlyPayment;
 
-  for (int year = 1; year <= 3; year++) {
+  for (int year = 1; year <= 3; year++) {  // Creates 3 Years
     double yearlyInterest = 0;
     double yearlyPrincipal = 0;
     cout << "Year " << year;
@@ -54,7 +54,7 @@ int main() {
     cout << setw(16) << "--------";
     cout << setw(25) << "---------";
     cout << endl;
-      for (int month = 1; month <= 12; month++) {
+      for (int month = 1; month <= 12; month++) {  // Creates 12 Months per year
         monthlyInterest = (loanAmount * (loanInterest / 12));
         yearlyPrincipal += (monthlyPayment - monthlyInterest);
         yearlyInterest += monthlyInterest;
