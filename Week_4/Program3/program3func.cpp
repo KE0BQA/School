@@ -52,16 +52,16 @@ int main(void) {
 
 double printToScreen(double loanAmount_2, double interest_2, double payment_2) {
   for (int year = 1; year <= 3; year++) {
-      double yearlyPrincipal = 0;
-      double yearlyInterest = 0;
-      cout << "Year " << year;
-      cout << setw(20) << "Interest";
-      cout << setw(25) << "Principal";
-      cout << endl;
-      cout << setw(10) << "---";
-      cout << setw(16) << "--------";
-      cout << setw(25) << "---------";
-      cout << endl;
+    double yearlyPrincipal = 0;
+    double yearlyInterest = 0;
+    cout << "Year " << year;
+    cout << setw(20) << "Interest";
+    cout << setw(25) << "Principal";
+    cout << endl;
+    cout << setw(10) << "---";
+    cout << setw(16) << "--------";
+    cout << setw(25) << "---------";
+    cout << endl;
     for (int month = 1; month <= 12; month++) {
       cout << setw(10) << month;
       cout << setw(16) << calculateMonthlyInterest(loanAmount_2, interest_2);

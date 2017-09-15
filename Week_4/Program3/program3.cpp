@@ -38,7 +38,7 @@ int main() {
 
   cout << "Interest Rate:\n";
   cin >> loanInterest;
-  loanInterest = (loanInterest / 100);  // changes interest to a decimal
+  loanInterest = (loanInterest / 100);  // Changes interest to decimal
 
   cout << "Monthly Payment:\n";
   cin >> monthlyPayment;
@@ -54,17 +54,17 @@ int main() {
     cout << setw(16) << "--------";
     cout << setw(25) << "---------";
     cout << endl;
-      for (int month = 1; month <= 12; month++) {  // Creates 12 Months per year
-        monthlyInterest = (loanAmount * (loanInterest / 12));
-        yearlyPrincipal += (monthlyPayment - monthlyInterest);
-        yearlyInterest += monthlyInterest;
-        cout << setw(9) << month << ":";
-        cout << setw(16) << monthlyInterest;
-        cout << setw(25) << (monthlyPayment - monthlyInterest);
-        loanAmount += monthlyInterest;
-        loanAmount -= monthlyPayment;
-        cout << endl;
-      }
+    for (int month = 1; month <= 12; month++) {  // Creates 12 Months per year
+      monthlyInterest = (loanAmount * (loanInterest / 12));
+      yearlyPrincipal += (monthlyPayment - monthlyInterest);
+      yearlyInterest += monthlyInterest;
+      cout << setw(9) << month << ":";
+      cout << setw(16) << monthlyInterest;
+      cout << setw(25) << (monthlyPayment - monthlyInterest);
+      loanAmount += monthlyInterest;
+      loanAmount -= monthlyPayment;
+      cout << endl;
+    }
     cout << setw(10) << "---";
     cout << setw(16) << "--------";
     cout << setw(25) << "---------";
