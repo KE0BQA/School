@@ -4,6 +4,7 @@
   J633V226
   Homework #03
   Calculate Loan Information
+  Copyright 2017
 */
 
 /*
@@ -45,25 +46,35 @@ int main() {
   for (int year = 1; year <= 3; year++) {
     double yearlyInterest = 0;
     double yearlyPrincipal = 0;
-    cout << "Year " << year << setw(20) << "Interest" << setw(25) << "Principal";
+    cout << "Year " << year;
+    cout << setw(20) << "Interest";
+    cout << setw(25) << "Principal";
     cout << endl;
-    cout << setw(10) << "---" << setw(16) << "--------" << setw(25) << "---------";
+    cout << setw(10) << "---";
+    cout << setw(16) << "--------";
+    cout << setw(25) << "---------";
     cout << endl;
       for (int month = 1; month <= 12; month++) {
         monthlyInterest = (loanAmount * (loanInterest / 12));
-        yearlyPrincipal = (yearlyPrincipal + (monthlyPayment - monthlyInterest));
-        yearlyInterest = (yearlyInterest + monthlyInterest);
-        cout << setw(9) << month << ":" << setw(15) << monthlyInterest;
+        yearlyPrincipal += (monthlyPayment - monthlyInterest);
+        yearlyInterest += monthlyInterest;
+        cout << setw(9) << month << ":";
+        cout << setw(16) << monthlyInterest;
         cout << setw(25) << (monthlyPayment - monthlyInterest);
-        loanAmount = (loanAmount + monthlyInterest);
-        loanAmount = (loanAmount - monthlyPayment);
+        loanAmount += monthlyInterest;
+        loanAmount -= monthlyPayment;
         cout << endl;
       }
-      cout << setw(10) << "---" << setw(16) << "--------" << setw(25) << "---------";
+      cout << setw(10) << "---";
+      cout << setw(16) << "--------";
+      cout << setw(25) << "---------";
       cout << endl;
-      cout << "Year " << year << " Totals: " << setw(11) << yearlyInterest << setw(25) << yearlyPrincipal;
+      cout << "Year " << year << " Totals: ";
+      cout << setw(11) << yearlyInterest;
+      cout << setw(25) << yearlyPrincipal;
       cout << endl;
-      cout << "Remaining Balance at year end:" << setw(21) << loanAmount;
+      cout << "Remaining Balance at year end:";
+      cout << setw(21) << loanAmount;
       cout << endl;
       cout << endl;
   }
