@@ -65,18 +65,18 @@ int main() {
         loanAmount -= monthlyPayment;
         cout << endl;
       }
-      cout << setw(10) << "---";
-      cout << setw(16) << "--------";
-      cout << setw(25) << "---------";
-      cout << endl;
-      cout << "Year " << year << " Totals: ";
-      cout << setw(11) << yearlyInterest;
-      cout << setw(25) << yearlyPrincipal;
-      cout << endl;
-      cout << "Remaining Balance at year end:";
-      cout << setw(21) << loanAmount;
-      cout << endl;
-      cout << endl;
+    cout << setw(10) << "---";
+    cout << setw(16) << "--------";
+    cout << setw(25) << "---------";
+    cout << endl;
+    cout << "Year " << year << " Totals: ";
+    cout << setw(11) << yearlyInterest;
+    cout << setw(25) << yearlyPrincipal;
+    cout << endl;
+    cout << "Remaining Balance at year end:";
+    cout << setw(21) << loanAmount;
+    cout << endl;
+    cout << endl;
   }
   return 0;
 }
