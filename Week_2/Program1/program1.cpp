@@ -5,6 +5,7 @@
   J633V226
   Homework #01
   Prompt user for two Numbers and choice of operation; will display results
+  Copyright 2017
 */
 
 #include <iostream>
