@@ -63,7 +63,7 @@ int main() {
       cout << endl;
       cout << "Year " << year << " Totals: " << setw(11) << yearlyInterest << setw(25) << yearlyPrincipal;
       cout << endl;
-      cout << "Remaining Balance at year end:" << setw(21) << loanAmount; // fix me
+      cout << "Remaining Balance at year end:" << setw(21) << loanAmount;
       cout << endl;
       cout << endl;
   }
