@@ -62,7 +62,6 @@ double printToScreen(double loanAmount_2, double interest_2, double payment_2) {
       cout << setw(16) << "--------";
       cout << setw(25) << "---------";
       cout << endl;
-
     for (int month = 1; month <= 12; month++) {
       cout << setw(10) << month;
       cout << setw(16) << calculateMonthlyInterest(loanAmount_2, interest_2);
@@ -73,18 +72,18 @@ double printToScreen(double loanAmount_2, double interest_2, double payment_2) {
       loanAmount_2 -= payment_2;
       cout << endl;
     }
-      cout << setw(10) << "---";
-      cout << setw(16) << "--------";
-      cout << setw(25) << "---------";
-      cout << endl;
-      cout << "Year " << year << " Totals: ";
-      cout << setw(11) << yearlyInterest;
-      cout << setw(25) << yearlyPrincipal;
-      cout << endl;
-      cout << "Remaining Balance at year end:";
-      cout << setw(21) << loanAmount_2;
-      cout << endl;
-      cout << endl;
+    cout << setw(10) << "---";
+    cout << setw(16) << "--------";
+    cout << setw(25) << "---------";
+    cout << endl;
+    cout << "Year " << year << " Totals: ";
+    cout << setw(11) << yearlyInterest;
+    cout << setw(25) << yearlyPrincipal;
+    cout << endl;
+    cout << "Remaining Balance at year end:";
+    cout << setw(21) << loanAmount_2;
+    cout << endl;
+    cout << endl;
   }
   return 0;
 }
