@@ -63,8 +63,7 @@ int main() {
       yearlyPrincipal += (monthlyPayment - monthlyInterest);
       yearlyInterest += monthlyInterest;
       cout << std::setw(9) << month << ":" << std::setw(16) << monthlyInterest
-           << std::setw(25) << (monthlyPayment -   // Calculates Principal
-                                monthlyInterest);  // Calculates Principal
+           << std::setw(25) << (monthlyPayment - monthlyInterest);
       loanAmount += monthlyInterest;
       loanAmount -= monthlyPayment;
       cout << std::endl;
