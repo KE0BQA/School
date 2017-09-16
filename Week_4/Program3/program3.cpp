@@ -15,11 +15,11 @@
   5. Repeat
   6. Calculate Total Yearly Interest
   7. Calculate Total Monthly Interest
-  8. Calculate Total Yearly Balance Remaining 
+  8. Calculate Total Yearly Balance Remaining
 */
 
-#include <iostream>
 #include <iomanip>
+#include <iostream>
 
 using namespace std;
 
@@ -47,32 +47,23 @@ int main() {
     double yearlyInterest = 0;
     double yearlyPrincipal = 0;
     cout << "Year " << year;
-    cout << setw(20) << "Interest";
-    cout << setw(25) << "Principal";
-    cout << endl;
-    cout << setw(10) << "---";
-    cout << setw(16) << "--------";
-    cout << setw(25) << "---------";
-    cout << endl;
+    cout << setw(20) << "Interest" << setw(25) << "Principal" << endl;
+    cout << setw(10) << "---" << setw(16) << "--------" << setw(25)
+         << "---------" << endl;
     for (int month = 1; month <= 12; month++) {  // Creates 12 Months per year
       monthlyInterest = (loanAmount * (loanInterest / 12));
       yearlyPrincipal += (monthlyPayment - monthlyInterest);
       yearlyInterest += monthlyInterest;
-      cout << setw(9) << month << ":";
-      cout << setw(16) << monthlyInterest;
-      cout << setw(25) << (monthlyPayment - monthlyInterest);  // Calculates the Principal
+      cout << setw(9) << month << ":" << setw(16) << monthlyInterest << setw(25)
+           << (monthlyPayment - monthlyInterest);  // Calculates the Principal
       loanAmount += monthlyInterest;
       loanAmount -= monthlyPayment;
       cout << endl;
     }
-    cout << setw(10) << "---";
-    cout << setw(16) << "--------";
-    cout << setw(25) << "---------";
-    cout << endl;
-    cout << "Year " << year << " Totals: ";
-    cout << setw(11) << yearlyInterest;
-    cout << setw(25) << yearlyPrincipal;
-    cout << endl;
+    cout << setw(10) << "---" << setw(16) << "--------" << setw(25)
+         << "---------" << endl;
+    cout << "Year " << year << " Totals: " << setw(11) << yearlyInterest
+         << setw(25) << yearlyPrincipal << endl;
     cout << "Remaining Balance at year end:";
     cout << setw(21) << loanAmount;
     cout << endl;
