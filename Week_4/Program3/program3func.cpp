@@ -26,7 +26,7 @@ using namespace std;
 double printToScreen(double loanAmount_2, double interst_2, double payment_2);
 double calculateMonthlyInterest(double loanAmount_3, double interest_3);
 
-int main(void) {
+int main() {
   double loanAmount_1;
   double interest_1;
   double payment_1;
