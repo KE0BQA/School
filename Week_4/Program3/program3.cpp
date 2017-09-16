@@ -17,10 +17,11 @@
   2. Calculate Monthly Interest
   3. Calculate Monthly Principle
   4. Subtract Principal from Balance
-  5. Repeat
+  5. Repeat Every Month x12
   6. Calculate Total Yearly Interest
   7. Calculate Total Monthly Interest
   8. Calculate Total Yearly Balance Remaining
+  9. Repeat Every Year x3
 */
 
 #include <iomanip>
@@ -62,8 +63,8 @@ int main() {
       yearlyPrincipal += (monthlyPayment - monthlyInterest);
       yearlyInterest += monthlyInterest;
       cout << std::setw(9) << month << ":" << std::setw(16) << monthlyInterest
-           << std::setw(25) << (monthlyPayment -   // Calculates Principle
-                                monthlyInterest);  // Calculates the Principal
+           << std::setw(25) << (monthlyPayment -   // Calculates Principal
+                                monthlyInterest);  // Calculates Principal
       loanAmount += monthlyInterest;
       loanAmount -= monthlyPayment;
       cout << std::endl;
