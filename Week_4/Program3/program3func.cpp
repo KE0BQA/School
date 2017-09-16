@@ -21,7 +21,10 @@
 #include <iomanip>
 #include <iostream>
 
-using namespace std;
+// using namespace std;
+using std::cout;
+using std::cin;
+using std::setw;
 
 double printToScreen(double loanAmount_2, double interst_2, double payment_2);
 double calculateMonthlyInterest(double loanAmount_3, double interest_3);
@@ -31,8 +34,8 @@ int main() {
   double interest_1;
   double payment_1;
 
-  cout.setf(ios::fixed);
-  cout.setf(ios::showpoint);
+  cout.setf(std::ios::fixed);
+  cout.setf(std::ios::showpoint);
   cout.precision(2);
 
   cout << "Amount of Loan:\n";
@@ -56,10 +59,10 @@ double printToScreen(double loanAmount_2, double interest_2, double payment_2) {
     double yearlyInterest = 0;
     cout << "Year " << year << setw(20) << "Interest" << setw(25)
          << "Principal";
-    cout << endl;
+    cout << std::endl;
     cout << setw(10) << "---" << setw(16) << "--------" << setw(25)
          << "---------";
-    cout << endl;
+    cout << std::endl;
     for (int month = 1; month <= 12; month++) {
       cout << setw(10) << month << setw(16)
            << calculateMonthlyInterest(loanAmount_2, interest_2) << setw(25)
@@ -69,17 +72,17 @@ double printToScreen(double loanAmount_2, double interest_2, double payment_2) {
       yearlyInterest += (calculateMonthlyInterest(loanAmount_2, interest_2));
       loanAmount_2 += calculateMonthlyInterest(loanAmount_2, interest_2);
       loanAmount_2 -= payment_2;
-      cout << endl;
+      cout << std::endl;
     }
     cout << setw(10) << "---" << setw(16) << "--------" << setw(25)
-         << "---------" << endl;
+         << "---------" << std::endl;
     cout << "Year " << year << " Totals: " << setw(11) << yearlyInterest
          << setw(25) << yearlyPrincipal;
-    cout << endl;
+    cout << std::endl;
     cout << "Remaining Balance at year end:";
     cout << setw(21) << loanAmount_2;
-    cout << endl;
-    cout << endl;
+    cout << std::endl;
+    cout << std::endl;
   }
   return 0;
 }
