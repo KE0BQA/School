@@ -5,12 +5,12 @@
   Homework #03
   Calculate Loan Information
   Copyright 2017
-*/
+  */
 
 /*
   Google C++ Style Guide
   https://google.github.io/styleguide/cppguide.html
- */
+  */
 
 /*
   1. Gather Loan Amount Interest and Monthly Payment
@@ -22,7 +22,7 @@
   7. Calculate Total Monthly Interest
   8. Calculate Total Yearly Balance Remaining
   9. Repeat Every Year x3
-*/
+  */
 
 #include <iomanip>
 #include <iostream>
