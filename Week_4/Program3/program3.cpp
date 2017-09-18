@@ -51,7 +51,7 @@ int main() {
   std::cin >> monthlyPayment;
 
   for (int year = 1; year <= 3; year++) {  // Creates 3 Years
-    double yearlyInterest = 0;
+    double yearlyInterest = 0;  // Both Vars Need to Reset Every Year
     double yearlyPrincipal = 0;
     cout << "Year " << year;
     cout << std::setw(20) << "Interest" << std::setw(25) << "Principal"
