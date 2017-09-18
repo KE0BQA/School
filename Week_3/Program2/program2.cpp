@@ -4,35 +4,37 @@
   J633V226
   Homework #02
   Draw to the terminal 3 shapes
+  Copyright 2017
 */
 
 #include <cmath>
 #include <iostream>
 
-using namespace std;
+// using namespace std;
+using std::cout;
 
 int main() {
   // Triangle
-  for (int c = 0; c <= 4;  c++) {
-    for (int b = c; b > 0; b--) {
+  for (int row = 0; row <= 4;  row++) {
+    for (int width = row; width > 0; width--) {
       cout << " ";
-    } for (int k = (2* (4 - c)); k >= 1; k--) {
+    } for (int height = (2* (4 - row)); height >= 1; height--) {
       cout << "#";
     }
-  cout << endl;
+  cout << std::endl;
   }
   // Triangle
 
   cout <<"\n";
 
   // Diamond
-  for (int c = 7; c >= 1;  c--) {
-    for (int b = (abs(4 - c)); b > 0; b--) {
+  for (int row = 7; row >= 1;  row--) {
+    for (int width = (abs(4 - row)); width > 0; width--) {
       cout << " ";
-    } for (int k = (2 *(4 - abs(4 - c))); k >= 1; k--) {
+    } for (int height = (2 *(4 - abs(4 - row))); height >= 1; height--) {
       cout << "#";
     }
-  cout << endl;
+  cout << std::endl;
   }
   // Diamond
 
@@ -49,7 +51,7 @@ int main() {
         cout <<" ";
       }
     }
-  cout << endl;
+  cout << std::endl;
   }
 
   return 0;
