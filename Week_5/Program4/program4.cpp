@@ -13,74 +13,88 @@
   */
 
 /*
-  Take Menu Option
-  Insert Amount (Loop)
-  Convert to Cents (Loop)
-  Program Must Loop till declined detected
-
+ Write Menu
+ Get Option
+ Accept Money
+ Compute Change
+ Repeat if needed.
  */
 
+#include <cctype>
 #include <iomanip>
 #include <iostream>
-#include <cctype>
 
 using std::cout;
 using std::cin;
 
-void menu(void);
-int acceptMoney(int price);
-int computeChange(int totalPaid, int totalPrice);
-int purchaseCost(int purchase);
+void writeMenu(void);
+int getSelection(char selection, float price);
+int acceptMoney();
+// int computeChange();
 
 int main() {
-  char purchase;
+  char selection = 0;
+  float price = 0;
+  // float money;
+  // float change;
 
   cout << "Welcome to the Snack Vending Machine \n";
   cout << std::endl;
-  menu();
-  cin >> purchase;
-  purchase = toupper(purchase);
-  purchaseCost(purchase);
-  cout << purchase;
-
+  writeMenu();
+  getSelection(selection, price);
+  cout << price;
   return 0;
 }
 
-void menu(void) {
+void writeMenu(void) {
+  cout.setf(std::ios::fixed);
+  cout.setf(std::ios::showpoint);
+  cout.precision(2);
   cout << "Avaliable snacks to choose from: \n"
-       << "\t P - Potato Chips" << std::setw(10) << "$1.25\n"
-       << "\t S - Snickers Bar" << std::setw(10) << "$1.35\n"
-       << "\t T - Pop Tart" << std::setw(14) << "$0.95\n"
-       << "\t C - Cookies" << std::setw(15) << "$1.50\n"
-       << "\t B - Brownie" << std::setw(15) << "$1.75\n"
-       << "\t N - Nuts" << std::setw(18) << "$1.40\n"
-       << "Please Enter the Letter Labeling Your Snack Selection: ";
+       << "\t P - Potato Chips" << std::setw(10) << "$1.25 \n"
+       << "\t S - Snickers Bar" << std::setw(10) << "$1.35 \n"
+       << "\t T - Pop Tart" << std::setw(14) << "$0.95 \n"
+       << "\t C - Cookies" << std::setw(15) << "$1.50 \n"
+       << "\t B - Brownie" << std::setw(15) << "$1.75 \n"
+       << "\t N - Nuts" << std::setw(18) << "$1.40 \n";
 }
 
-int purchaseCost(int purchase) {
-  switch (purchase) {
+int getSelection(char selection, float price) {
+  cout << "Please Enter the Letter Labeling your Snack Selection: \n";
+  cin >> selection;
+  selection = toupper(selection);
+
+  switch (selection) {
     case 'P':
-    purchase = 125;
+      price = 125;
+      break;
     case 'S':
-    purchase = 135;
+      price = 135;
+      break;
     case 'T':
-    purchase = 95;
+      price = 95;
+      break;
     case 'C':
-    purchase = 150;
+      price = 150;
+      break;
     case 'B':
-    purchase = 175;
+      price = 175;
+      break;
     case 'N':
-    purchase = 140;
+      price = 140;
+      break;
     default:
-      cout << "Not Valid";
-    return purchase;
+      std::cout << "Not Valid";
+      break;
   }
+  cout << price;
+  return price;
 }
 
 int acceptMoney(int price) {
   cout << "Money Accepted by the Machine \n"
-      << "\t N - Nickel \n"
-      << "\t Q - Quarter \n"
-      << "\t D - Dollar \n";
+       << "\t N - Nickel \n"
+       << "\t Q - Quarter \n"
+       << "\t D - Dollar \n";
   return 0;
 }
