@@ -29,20 +29,20 @@ using std::cin;
 
 void writeMenu(void);
 int getSelection(char selection, float price);
-int acceptMoney();
+int acceptMoney(float price, float money);
 // int computeChange();
 
 int main() {
   char selection = 0;
   float price = 0;
-  // float money;
+  float money = 0;
   // float change;
 
   cout << "Welcome to the Snack Vending Machine \n";
   cout << std::endl;
   writeMenu();
   getSelection(selection, price);
-  cout << price;
+  acceptMoney(price, money);
   return 0;
 }
 
@@ -84,17 +84,20 @@ int getSelection(char selection, float price) {
       price = 140;
       break;
     default:
-      std::cout << "Not Valid";
+      cout << "Not Valid";
       break;
   }
-  cout << price;
   return price;
 }
 
-int acceptMoney(int price) {
+int acceptMoney(float price, float money) {
   cout << "Money Accepted by the Machine \n"
        << "\t N - Nickel \n"
        << "\t Q - Quarter \n"
-       << "\t D - Dollar \n";
+       << "\t D - Dollar \n"
+       << "Your Selected Item Cost: " << price << std::setw(3) << " CENTS"
+       << std::endl
+       << "Your Total Inserted: " << std::setw(8) << money << std::setw(3)
+       << " CENTS" << std::endl;
   return 0;
 }
