@@ -39,10 +39,12 @@ int main() {
 
   cout << "Welcome to the Snack Vending Machine \n";
   cout << std::endl;
-  writeMenu();
-  getSelection(selection, price);
-  acceptMoney(price, money);
-  computeChange(price, money);
+  while (true) {
+    writeMenu();
+    getSelection(selection, price);
+    acceptMoney(price, money);
+    computeChange(price, money);
+  }
   return 0;
 }
 
@@ -95,14 +97,18 @@ int getSelection(char selection, float& price) {
 
 int acceptMoney(float price, float& money) {
   char moneySelection = 0;
+  money = 0;
+  cout.precision(1);
+  cout << std::endl;
   cout << "Money Accepted by the Machine \n"
        << "\t N - Nickel \n"
        << "\t Q - Quarter \n"
-       << "\t D - Dollar \n";
+       << "\t D - Dollar \n"
+       << std::endl;
   while (money < price) {
     cout << "Your Selected Item Cost: " << price << std::setw(3) << " CENTS"
          << std::endl
-         << "Your Total Inserted: " << std::setw(8) << money << std::setw(3)
+         << "Your Total Inserted: " << std::setw(8) << money << std::setw(6)
          << " CENTS" << std::endl;
     cout << "Insert Amount: \n";
     cin >> moneySelection;
@@ -118,7 +124,7 @@ int acceptMoney(float price, float& money) {
         money += 100;
         break;
       default:
-        cout << moneySelection << "is not a coin \n"
+        cout << moneySelection << " is not a coin \n"
              << "Try Again \n";
         continue;
     }
@@ -128,5 +134,5 @@ int acceptMoney(float price, float& money) {
 
 void computeChange(float money, float price) {
   cout << "Your Total Inserted: " << money << " \n"
-       << "Dispensing Change: " << price - money;
+       << "Dispensing Change: " << price - money << "\n";
 }
