@@ -28,21 +28,21 @@ using std::cout;
 using std::cin;
 
 void writeMenu(void);
-int getSelection(char selection, float price);
-int acceptMoney(float price, float money);
-// int computeChange();
+int getSelection(char selection, float& price);
+int acceptMoney(float price, float& money);
+void computeChange(float money, float price);
 
 int main() {
   char selection = 0;
   float price = 0;
   float money = 0;
-  // float change;
 
   cout << "Welcome to the Snack Vending Machine \n";
   cout << std::endl;
   writeMenu();
   getSelection(selection, price);
   acceptMoney(price, money);
+  computeChange(price, money);
   return 0;
 }
 
@@ -59,45 +59,74 @@ void writeMenu(void) {
        << "\t N - Nuts" << std::setw(18) << "$1.40 \n";
 }
 
-int getSelection(char selection, float price) {
-  cout << "Please Enter the Letter Labeling your Snack Selection: \n";
-  cin >> selection;
-  selection = toupper(selection);
-
-  switch (selection) {
-    case 'P':
-      price = 125;
-      break;
-    case 'S':
-      price = 135;
-      break;
-    case 'T':
-      price = 95;
-      break;
-    case 'C':
-      price = 150;
-      break;
-    case 'B':
-      price = 175;
-      break;
-    case 'N':
-      price = 140;
-      break;
-    default:
-      cout << "Not Valid";
-      break;
+int getSelection(char selection, float& price) {
+  while (true) {
+    cout << "Please Enter the Letter Labeling your Snack Selection: \n";
+    cin >> selection;
+    selection = toupper(selection);
+    switch (selection) {
+      case 'P':
+        price = 125;
+        break;
+      case 'S':
+        price = 135;
+        break;
+      case 'T':
+        price = 95;
+        break;
+      case 'C':
+        price = 150;
+        break;
+      case 'B':
+        price = 175;
+        break;
+      case 'N':
+        price = 140;
+        break;
+      default:
+        cout << "Not Valid \n"
+             << "Try Again \n";
+        continue;
+    }
+    break;
   }
   return price;
 }
 
-int acceptMoney(float price, float money) {
+int acceptMoney(float price, float& money) {
+  char moneySelection = 0;
   cout << "Money Accepted by the Machine \n"
        << "\t N - Nickel \n"
        << "\t Q - Quarter \n"
-       << "\t D - Dollar \n"
-       << "Your Selected Item Cost: " << price << std::setw(3) << " CENTS"
-       << std::endl
-       << "Your Total Inserted: " << std::setw(8) << money << std::setw(3)
-       << " CENTS" << std::endl;
-  return 0;
+       << "\t D - Dollar \n";
+  while (money < price) {
+    cout << "Your Selected Item Cost: " << price << std::setw(3) << " CENTS"
+         << std::endl
+         << "Your Total Inserted: " << std::setw(8) << money << std::setw(3)
+         << " CENTS" << std::endl;
+    cout << "Insert Amount: \n";
+    cin >> moneySelection;
+    moneySelection = toupper(moneySelection);
+    switch (moneySelection) {
+      case 'N':
+        money += 5;
+        break;
+      case 'Q':
+        money += 25;
+        break;
+      case 'D':
+        money += 100;
+        break;
+      default:
+        cout << moneySelection << "is not a coin \n"
+             << "Try Again \n";
+        continue;
+    }
+  }
+  return money;
+}
+
+void computeChange(float money, float price) {
+  cout << "Your Total Inserted: " << money << " \n"
+       << "Dispensing Change: " << price - money;
 }
