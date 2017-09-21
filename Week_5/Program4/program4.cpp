@@ -49,9 +49,6 @@ int main() {
 }
 
 void writeMenu(void) {
-  cout.setf(std::ios::fixed);
-  cout.setf(std::ios::showpoint);
-  cout.precision(2);
   cout << "Avaliable snacks to choose from: \n"
        << "\t P - Potato Chips" << std::setw(10) << "$1.25 \n"
        << "\t S - Snickers Bar" << std::setw(10) << "$1.35 \n"
@@ -62,7 +59,7 @@ void writeMenu(void) {
 }
 
 int getSelection(char selection, float& price) {
-  while (true) {
+  while (true) {  // Runs Until Valid Answer
     cout << "Please Enter the Letter Labeling your Snack Selection: \n";
     cin >> selection;
     selection = toupper(selection);
@@ -97,15 +94,14 @@ int getSelection(char selection, float& price) {
 
 int acceptMoney(float price, float& money) {
   char moneySelection = 0;
-  money = 0;
-  cout.precision(1);
+  money = 0;  // Reset Money Every Run
   cout << std::endl;
   cout << "Money Accepted by the Machine \n"
        << "\t N - Nickel \n"
        << "\t Q - Quarter \n"
        << "\t D - Dollar \n"
        << std::endl;
-  while (money < price) {
+  while (money <= price) {  // Runs While Money Inserted is Less Than Cost
     cout << "Your Selected Item Cost: " << price << std::setw(3) << " CENTS"
          << std::endl
          << "Your Total Inserted: " << std::setw(8) << money << std::setw(6)
@@ -129,10 +125,10 @@ int acceptMoney(float price, float& money) {
         continue;
     }
   }
-  return money;
+  return money;  // While Loop is breaking before total is updated
 }
 
 void computeChange(float money, float price) {
-  cout << "Your Total Inserted: " << money << " \n"
-       << "Dispensing Change: " << price - money << "\n";
+  cout << "Your Total Inserted: " << money << std::endl
+       << "Dispensing Change: " << price - money << std::endl;
 }
