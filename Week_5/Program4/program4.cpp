@@ -17,7 +17,7 @@
  Get Option
  Accept Money
  Compute Change
- Repeat if needed.
+ Repeat if needed. (Do While and Switch Statement?)
  */
 
 #include <cctype>
@@ -39,7 +39,7 @@ int main() {
 
   cout << "Welcome to the Snack Vending Machine \n";
   cout << std::endl;
-  while (true) {
+  while (true) {  // Infinite Loop Must Fix
     writeMenu();
     getSelection(selection, price);
     acceptMoney(price, money);
