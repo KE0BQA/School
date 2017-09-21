@@ -30,21 +30,34 @@ using std::cin;
 void writeMenu(void);
 int getSelection(char selection, float& price);
 int acceptMoney(float price, float& money);
-void computeChange(float money, float price);
+void computeChange(float price, float money);
 
 int main() {
+  char repurchase = 0;
   char selection = 0;
   float price = 0;
   float money = 0;
 
   cout << "Welcome to the Snack Vending Machine \n";
   cout << std::endl;
-  while (true) {  // Infinite Loop Must Fix
+  do {
     writeMenu();
     getSelection(selection, price);
     acceptMoney(price, money);
     computeChange(price, money);
-  }
+    cout << "Would you like to make another purchase? (Y/N)";
+    cin >> repurchase;
+    switch (repurchase) {
+      case 'y':
+      case 'Y':
+        repurchase = 0;
+        break;
+      default:
+        repurchase = 1;
+        break;
+    }
+  } while (repurchase == 0);
+  cout << "Thank You";
   return 0;
 }
 
@@ -101,7 +114,7 @@ int acceptMoney(float price, float& money) {
        << "\t Q - Quarter \n"
        << "\t D - Dollar \n"
        << std::endl;
-  while (money <= price) {  // Runs While Money Inserted is Less Than Cost
+  while (money <= price) {
     cout << "Your Selected Item Cost: " << price << std::setw(3) << " CENTS"
          << std::endl
          << "Your Total Inserted: " << std::setw(8) << money << std::setw(6)
@@ -125,10 +138,10 @@ int acceptMoney(float price, float& money) {
         continue;
     }
   }
-  return money;  // While Loop is breaking before total is updated
+  return money;
 }
 
-void computeChange(float money, float price) {
-  cout << "Your Total Inserted: " << money << std::endl
-       << "Dispensing Change: " << price - money << std::endl;
+void computeChange(float price, float money) {
+  cout << "Your Total Inserted: " << std::setw(5) << money << std::endl
+       << "Dispensing Change: " << std::setw(7) << money - price << std::endl;
 }
