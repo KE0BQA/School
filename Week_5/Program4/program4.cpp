@@ -17,7 +17,7 @@
  Get Option
  Accept Money
  Compute Change
- Repeat if needed. (Do While and Switch Statement?)
+ Repeat if needed.
  */
 
 #include <cctype>
@@ -45,7 +45,7 @@ int main() {
     getSelection(selection, price);
     acceptMoney(price, money);
     computeChange(price, money);
-    cout << "Would you like to make another purchase? (Y/N)";
+    cout << std::endl << "Would you care to make another purchase? (Y/N): ";
     cin >> repurchase;
     switch (repurchase) {
       case 'y':
@@ -57,7 +57,7 @@ int main() {
         break;
     }
   } while (repurchase == 0);
-  cout << "Thank You";
+  cout << std::endl << "Thank you and enjoy your purchase!";
   return 0;
 }
 
@@ -73,7 +73,7 @@ void writeMenu(void) {
 
 int getSelection(char selection, float& price) {
   while (true) {  // Runs Until Valid Answer
-    cout << "Please Enter the Letter Labeling your Snack Selection: \n";
+    cout << "Please Enter the Letter Labeling your Snack Selection: ";
     cin >> selection;
     selection = toupper(selection);
     switch (selection) {
@@ -96,8 +96,7 @@ int getSelection(char selection, float& price) {
         price = 140;
         break;
       default:
-        cout << "Not Valid \n"
-             << "Try Again \n";
+        cout << "Invalid selection! \n";
         continue;
     }
     break;
@@ -112,14 +111,14 @@ int acceptMoney(float price, float& money) {
   cout << "Money Accepted by the Machine \n"
        << "\t N - Nickel \n"
        << "\t Q - Quarter \n"
-       << "\t D - Dollar \n"
-       << std::endl;
+       << "\t D - Dollar \n";
   while (money <= price) {
-    cout << "Your Selected Item Cost: " << price << std::setw(3) << " CENTS"
+    cout << std::endl
+         << "Your Selected Item Cost: " << price << std::setw(3) << " CENTS"
          << std::endl
-         << "Your Total Inserted: " << std::setw(8) << money << std::setw(6)
+         << "Your Total Inserted: " << std::setw(7) << money << std::setw(6)
          << " CENTS" << std::endl;
-    cout << "Insert Amount: \n";
+    cout << "Insert amount (enter letter of choice): ";
     cin >> moneySelection;
     moneySelection = toupper(moneySelection);
     switch (moneySelection) {
@@ -133,8 +132,7 @@ int acceptMoney(float price, float& money) {
         money += 100;
         break;
       default:
-        cout << moneySelection << " is not a coin \n"
-             << "Try Again \n";
+        cout << moneySelection << " is not recognized as a coin\n";
         continue;
     }
   }
@@ -142,6 +140,9 @@ int acceptMoney(float price, float& money) {
 }
 
 void computeChange(float price, float money) {
-  cout << "Your Total Inserted: " << std::setw(5) << money << std::endl
-       << "Dispensing Change: " << std::setw(7) << money - price << std::endl;
+  cout << std::endl
+       << "Your Total Inserted: " << std::setw(7) << money << std::setw(6)
+       << " CENTS" << std::endl
+       << "Dispensing Change: " << std::setw(9) << money - price << std::setw(6)
+       << " CENTS" << std::endl;
 }
