@@ -60,7 +60,7 @@ int main() {
         break;
     }
   } while (repurchase == 0);
-  cout << std::endl << "Thank you and enjoy your purchase!";
+  cout << std::endl << "Thank you and enjoy your purchase!" << std::endl;
   return 0;
 }
 
