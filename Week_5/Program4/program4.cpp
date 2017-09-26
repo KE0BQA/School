@@ -27,9 +27,13 @@
 using std::cout;
 using std::cin;
 
+// Displays Menu To Choose From
 void writeMenu(void);
+// Gets User Selection
 int getSelection(char selection, float& price);
+// Accepts and Sums Money Inserted
 int acceptMoney(float price, float& money);
+// Returns Change to User
 void computeChange(float price, float money);
 
 int main() {
