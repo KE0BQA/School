@@ -24,29 +24,28 @@
 #include <iomanip>
 #include <iostream>
 
-using std::cout;
 using std::cin;
+using std::cout;
 
 // Displays Menu To Choose From
 void writeMenu(void);
 // Gets User Selection
-int getSelection(char selection, float& price);
+int getSelection(int& price);
 // Accepts and Sums Money Inserted
-int acceptMoney(float price, float& money);
+int acceptMoney(int price, int& money);
 // Returns Change to User
-void computeChange(float price, float money);
+void computeChange(int price, int money);
 
 int main() {
   char repurchase = 0;
-  char selection = 0;
-  float price = 0;
-  float money = 0;
+  int price = 0;
+  int money = 0;
 
   cout << "Welcome to the Snack Vending Machine \n";
   cout << std::endl;
   do {
     writeMenu();
-    getSelection(selection, price);
+    getSelection(price);
     acceptMoney(price, money);
     computeChange(price, money);
     cout << std::endl << "Would you care to make another purchase? (Y/N): ";
@@ -75,7 +74,8 @@ void writeMenu(void) {
        << "\t N - Nuts" << std::setw(18) << "$1.40 \n";
 }
 
-int getSelection(char selection, float& price) {
+int getSelection(int& price) {
+  char selection = 0;
   while (true) {  // Runs Until Valid Answer
     cout << "Please Enter the Letter Labeling your Snack Selection: ";
     cin >> selection;
@@ -108,7 +108,7 @@ int getSelection(char selection, float& price) {
   return price;
 }
 
-int acceptMoney(float price, float& money) {
+int acceptMoney(int price, int& money) {
   char moneySelection = 0;
   money = 0;  // Reset Money Every Run
   cout << std::endl;
@@ -116,13 +116,13 @@ int acceptMoney(float price, float& money) {
        << "\t N - Nickel \n"
        << "\t Q - Quarter \n"
        << "\t D - Dollar \n";
-  while (money <= price) {
+  while (money < price) {
     cout << std::endl
          << "Your Selected Item Cost: " << price << std::setw(3) << " CENTS"
          << std::endl
          << "Your Total Inserted: " << std::setw(7) << money << std::setw(6)
-         << " CENTS" << std::endl;
-    cout << "Insert amount (enter letter of choice): ";
+         << " CENTS" << std::endl
+         << "Insert amount (enter letter of choice): ";
     cin >> moneySelection;
     moneySelection = toupper(moneySelection);
     switch (moneySelection) {
@@ -143,7 +143,7 @@ int acceptMoney(float price, float& money) {
   return money;
 }
 
-void computeChange(float price, float money) {
+void computeChange(int price, int money) {
   cout << std::endl
        << "Your Total Inserted: " << std::setw(7) << money << std::setw(6)
        << " CENTS" << std::endl
