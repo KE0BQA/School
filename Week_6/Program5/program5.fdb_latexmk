@@ -1,9 +1,0 @@
-# Fdb version 3
-["pdflatex"] 1506531830 "program5.cpp" "program5.pdf" "program5" 1506531830
-  "/usr/share/texmf-dist/web2c/texmf.cnf" 1501615481 32585 d82bbcf7626b7842c87671687479e852 ""
-  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1503112396 7735972 1934ace083dc50794a08624858b5f64b ""
-  "program5.aux" 1506531830 8 a94a2480d3289e625eea47cd1b285758 ""
-  "program5.cpp" 1506531829 190 3adb524c2cadb8379a99075b624c81a8 ""
-  (generated)
-  "program5.pdf"
-  "program5.log"
