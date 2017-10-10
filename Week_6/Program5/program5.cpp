@@ -36,7 +36,7 @@ int main() {
       }
       cout << std::endl;
     }
-    cout << "and ";
+    cout << "And ";
     for (int fullName = 0; fullName < 5; fullName++) {
       cout << dog[fullName] << " ";
     }
