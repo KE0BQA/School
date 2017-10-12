@@ -20,24 +20,24 @@ const int SIZE = 5;
 const char dog[SIZE] = {'B', 'I', 'N', 'G', 'O'};
 
 int main() {
-  for (int num = 0; num < 6; num++) {
+  for (int num = 0; num < 6; num++) {  // Prints out Total Number of Blocks
     cout << "There was a farmer had a dog" << std::endl << "and ";
-    for (int fullName = 0; fullName < 5; fullName++) {
+    for (int fullName = 0; fullName < 5; fullName++) {  // Prints out entire Name
       cout << dog[fullName] << " ";
     }
     cout << " was his name-o" << std::endl;
     for (int row = 0; row < 3; row++) {
-      for (int line = 0; line < 5; line++) {
-        if (line <= (num - 1)) {
+      for (int clap = 0; clap < 5; clap++) {  // Outputs needed "*"
+        if (clap <= (num - 1)) {
           cout << "* ";
         } else {
-          cout << dog[line] << " ";
+          cout << dog[clap] << " ";
         }
       }
       cout << std::endl;
     }
     cout << "And ";
-    for (int fullName = 0; fullName < 5; fullName++) {
+    for (int fullName = 0; fullName < 5; fullName++) {  // Full Name
       cout << dog[fullName] << " ";
     }
     cout << " was his name-o" << std::endl << std::endl;
