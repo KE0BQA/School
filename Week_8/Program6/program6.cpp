@@ -18,14 +18,38 @@
 using std::cin;
 using std::cout;
 
-char encrypt();
-char decrypt();
+void printEntry(char a[], int size);
+void encrypt(char a[], int size);
+void decrypt(char a[], int size);
 
+const int size = 200;
 int shift = 4;
 
 int main() {
-  cout << "";
-  cin.getletter();
+  char message[size], letter;
+  int count = 0;
+
+  cout << "Please enter a message (200 Character Limit): ";
+  cin.get(letter);
+  while (letter != '\n' && count < size) {
+    message[count] = letter;
+
+  }
+
+  // Convert to Ascii
+  // Add shift
+  // display encrypt
+  // display original
 
   return 0;
+}
+
+void printEntry(char a[], int size) {
+
+}
+void encrypt(char a[], int size); {
+
+}
+void decrypt(char a[], int size) {
+
 }
