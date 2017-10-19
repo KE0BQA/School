@@ -47,6 +47,22 @@ int main() {
   return 0;
 }
 
-void printEntry(char a[], int size) {}
-void encrypt(char a[], int size) {}
+void printEntry(char a[], int size) {
+  for (int i = 0; i < size; i++) {
+    cout << a[i];
+  }
+  cout << std::endl;
+}
+void encrypt(char a[], int size) {
+  for (int i = 0; i < size; i++) {
+    if (a[i] != ' ') {
+      if (a[i] < 'W') {
+        a[i] += shift;
+      } else {
+        a[i] -= 22;
+      }
+    }
+  }
+  printEntry(a, size);
+}
 void decrypt(char a[], int size) {}
