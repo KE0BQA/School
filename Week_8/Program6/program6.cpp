@@ -33,23 +33,20 @@ int main() {
   cin.get(letter);
   while (letter != '\n' && count < size) {
     message[count] = letter;
-
+    count++;
+    cin.get(letter);
   }
-
-  // Convert to Ascii
-  // Add shift
-  // display encrypt
-  // display original
+  for (int i = 0; i < count; i++) {
+    message[i] = toupper(message[i]);
+    cout << std::endl;
+  }
+  printEntry(message, count);
+  encrypt(message, count);
+  decrypt(message, count);
 
   return 0;
 }
 
-void printEntry(char a[], int size) {
-
-}
-void encrypt(char a[], int size); {
-
-}
-void decrypt(char a[], int size) {
-
-}
+void printEntry(char a[], int size) {}
+void encrypt(char a[], int size) {}
+void decrypt(char a[], int size) {}
