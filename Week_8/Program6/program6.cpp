@@ -38,8 +38,8 @@ int main() {
   }
   for (int i = 0; i < count; i++) {
     message[i] = toupper(message[i]);
-    cout << std::endl;
   }
+  // cout << std::endl;
   printEntry(message, count);
   encrypt(message, count);
   decrypt(message, count);
@@ -66,9 +66,9 @@ void encrypt(char a[], int size) {
   printEntry(a, size);
 }
 void decrypt(char a[], int size) {
-    for (int i = 0; i < size; i++) {
+  for (int i = 0; i < size; i++) {
     if (a[i] != ' ') {
-      if (a[i] < 'D') {
+      if (a[i] > 'D') {
         a[i] -= shift;
       } else {
         a[i] += 22;
