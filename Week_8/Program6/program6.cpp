@@ -12,6 +12,7 @@
   https://google.github.io/styleguide/cppguide.html
   */
 
+#include <cctype>
 #include <iostream>
 
 using std::cin;
@@ -22,6 +23,9 @@ char decrypt();
 
 int shift = 4;
 
-int main() { 
-  return 0; 
+int main() {
+  cout << "";
+  cin.getletter();
+
+  return 0;
 }
