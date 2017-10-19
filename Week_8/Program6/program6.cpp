@@ -65,4 +65,15 @@ void encrypt(char a[], int size) {
   }
   printEntry(a, size);
 }
-void decrypt(char a[], int size) {}
+void decrypt(char a[], int size) {
+    for (int i = 0; i < size; i++) {
+    if (a[i] != ' ') {
+      if (a[i] < 'D') {
+        a[i] -= shift;
+      } else {
+        a[i] += 22;
+      }
+    }
+  }
+  printEntry(a, size);
+}
