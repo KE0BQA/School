@@ -18,9 +18,9 @@
 using std::cin;
 using std::cout;
 
-void printEntry(char a[], int size);
-void encrypt(char a[], int size);
-void decrypt(char a[], int size);
+void printEntry(char a[], int size);  // Print Message
+void encrypt(char a[], int size);     // Apply Shift
+void decrypt(char a[], int size);     // Remove Shift
 
 const int size = 200;
 int shift = 4;
@@ -31,12 +31,12 @@ int main() {
 
   cout << "Please enter a message (200 Character Limit): ";
   cin.get(letter);
-  while (letter != '\n' && count < size) {
+  while (letter != '\n' && count < size) {  // Check to not exceed the array
     message[count] = letter;
     count++;
     cin.get(letter);
   }
-  for (int i = 0; i < count; i++) {
+  for (int i = 0; i < count; i++) {  // Convert to Uppercase
     message[i] = toupper(message[i]);
   }
   // cout << std::endl;
