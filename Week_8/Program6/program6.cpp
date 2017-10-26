@@ -39,7 +39,6 @@ int main() {
   for (int i = 0; i < count; i++) {  // Convert to Uppercase
     message[i] = toupper(message[i]);
   }
-  // cout << std::endl;
   printEntry(message, count);
   encrypt(message, count);
   decrypt(message, count);
