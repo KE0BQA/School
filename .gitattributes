@@ -22,6 +22,7 @@
 # these files as binary and thus will always conflict and require user
 # intervention with every merge. To do so, just uncomment the entries below
 ###############################################################################
+#*.cpp		 merge=auto
 #*.sln       merge=binary
 #*.csproj    merge=binary
 #*.vbproj    merge=binary
@@ -51,6 +52,7 @@
 # is only available from the command line. Turn it on by uncommenting the 
 # entries below.
 ###############################################################################
+#*.cpp   diff=astextplain
 #*.doc   diff=astextplain
 #*.DOC   diff=astextplain
 #*.docx  diff=astextplain
