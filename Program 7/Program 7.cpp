@@ -48,9 +48,8 @@ int main() {
   return 0;
 }
 void bubbleSort(string words[], int num) {
-  int i, j;
-  for (i = 0; i < (num - 1); i++) {
-    for (j = 0; j < (num - i - 1); j++)
+  for (int i = 0; i < (num - 1); i++) {
+    for (int j = 0; j < (num - i - 1); j++)
       if (words[j] > words[j + 1]) {
         swap(words[j], words[j + 1]);
       }
