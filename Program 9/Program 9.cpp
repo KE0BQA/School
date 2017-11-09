@@ -28,11 +28,7 @@ int main() {
   cout.precision(2);
 
   input(celsius);
-  print(celsius);
-  cout << std::endl;
   convert(celsius);
-  cout << std::endl;
-  print(celsius);
   return 0;
 }
 
@@ -55,7 +51,7 @@ void input(double celsius[][24]) {
 void convert(double celsius[][24]) {
   for (int i = 0; i <= 23; i++) {
     for (int j = 0; j <= 6; j++) {
-      celsius[j][i] = (celsius[i][j] - 32) * (5 / 9);
+      celsius[j][i] = ((celsius[j][i] - 32) * 5 / 9);
     }
   }
 }
