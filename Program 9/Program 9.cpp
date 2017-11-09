@@ -15,24 +15,55 @@ Copyright 2017
 
 using std::cout;
 using std::ifstream;
-using std::ofstream;
+
+void input(double celsius[][24]);
+void print(double celsius[][24]);
+void convert(double celsius[][24]);
 
 int main() {
   double celsius[7][24];
-  ifstream fin;
-  ofstream fout;
 
+  cout.setf(std::ios::fixed);
+  cout.setf(std::ios::showpoint);
+  cout.precision(2);
+
+  input(celsius);
+  print(celsius);
+  cout << std::endl;
+  convert(celsius);
+  cout << std::endl;
+  print(celsius);
+  return 0;
+}
+
+void input(double celsius[][24]) {
+  ifstream fin;
   fin.open("temperature.dat");
   if (fin.fail()) {
     cout << "Failed to open input file. Exiting.... \n";
     exit(1);
   }
-  fout.open("temperature.dat");
-  if (fout.fail()) {
-    cout << "Failed to open output file. Exiting.... \n";
-    exit(1);
+  while (!(fin.eof())) {
+    for (int i = 0; i <= 23; i++) {
+      for (int j = 0; j <= 6; j++) {
+        fin >> celsius[j][i];
+      }
+    }
+    fin.close();
   }
-  fin.close();
-  fout.close();
-  return 0;
+}
+void convert(double celsius[][24]) {
+  for (int i = 0; i <= 23; i++) {
+    for (int j = 0; j <= 6; j++) {
+      celsius[j][i] = (celsius[i][j] - 32) * (5 / 9);
+    }
+  }
+}
+void print(double celsius[][24]) {
+  for (int i = 0; i <= 23; i++) {
+    for (int j = 0; j <= 6; j++) {
+      cout << celsius[j][i] << " ";
+    }
+    cout << std::endl;
+  }
 }
