@@ -1,9 +1,9 @@
-﻿/*
+/*
 program8.cpp
 Dyllan Uplinger
 J633V226
 Homework #08
-Bubble Sort (Dynamic)
+Bubble Sort (Dynamic Bubble Sort)
 Copyright 2017
 */
 
