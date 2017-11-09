@@ -19,3 +19,12 @@
 /Hello World/Debug
 /Program 8/.vs/Program 8/v15
 /Program 8/Debug
+/Program 9/.vs/Program 9/v15/.suo
+*.db
+*.ipch
+*.sln
+*.vcxproj
+*.filters
+/Program 9/stdafx.cpp
+/Program 9/targetver.h
+/Program 9/stdafx.h
