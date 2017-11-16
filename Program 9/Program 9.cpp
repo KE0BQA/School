@@ -37,7 +37,11 @@ int main() {
   convert(celsius, days);
   showWarmer(celsius, days);
   cout << "The average temperature over all the days was: "
-       << findAverage(celsius, days) << std::endl;
+       << findAverage(celsius, days) << std::endl
+       << std::endl;
+  cout << "The Maximum, Minimum, and Mean Temperatures for each day:"
+       << std::endl
+       << std::endl;
   for (int day = 0; day < days; day++) {
     findDailyMaxMinMean(celsius[day], max, min, mean);
     cout << "Day " << day + 1 << ": Max " << max << " C, Min " << min
@@ -73,14 +77,19 @@ void showWarmer(double celsius[][24], int days) {
   double cutoff = 0;
   cout << "Enter the value for which to find warmer temperatures (C): ";
   cin >> cutoff;
+  cout << std::endl
+       << "Times at which termperatures warmer than " << cutoff
+       << " C were found:" << std::endl
+       << std::endl;
   for (int day = 0; day < days; day++) {
     for (int hour = 0; hour < 24; hour++) {
       if (celsius[day][hour] > cutoff)
         cout << "At day " << day + 1 << ","
-             << " hour " << hour << ","
+             << " hour " << hour + 1 << ","
              << " the temp was " << celsius[day][hour] << " C" << std::endl;
     }
   }
+  cout << std::endl;
 }
 double findAverage(double celsius[][24], int days) {
   double total = 0;
