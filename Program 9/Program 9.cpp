@@ -38,9 +38,9 @@ int main() {
   showWarmer(celsius, days);
   cout << "The average temperature over all the days was: "
        << findAverage(celsius, days) << std::endl;
-  for (int day = 1; day <= days; day++) {
+  for (int day = 0; day < days; day++) {
     findDailyMaxMinMean(celsius[day], max, min, mean);
-    cout << "Day " << day << ": Max " << max << " C, Min " << min
+    cout << "Day " << day + 1 << ": Max " << max << " C, Min " << min
          << " C, Mean " << mean << " C" << std::endl;
   }
   return 0;
@@ -54,8 +54,8 @@ void input(double celsius[][24], int days) {
     exit(1);
   }
   while (!(fin.eof())) {
-    for (int day = 1; day <= days; day++) {
-      for (int hour = 1; hour <= 24; hour++) {
+    for (int day = 0; day < days; day++) {
+      for (int hour = 0; hour < 24; hour++) {
         fin >> celsius[day][hour];
       }
     }
@@ -63,8 +63,8 @@ void input(double celsius[][24], int days) {
   }
 }
 void convert(double celsius[][24], int days) {
-  for (int day = 1; day <= days; day++) {
-    for (int hour = 1; hour <= 24; hour++) {
+  for (int day = 0; day < days; day++) {
+    for (int hour = 0; hour < 24; hour++) {
       celsius[day][hour] = ((celsius[day][hour] - 32) * 5 / 9);
     }
   }
@@ -73,10 +73,10 @@ void showWarmer(double celsius[][24], int days) {
   double cutoff = 0;
   cout << "Enter the value for which to find warmer temperatures (C): ";
   cin >> cutoff;
-  for (int day = 1; day <= days; day++) {
-    for (int hour = 1; hour <= 24; hour++) {
+  for (int day = 0; day < days; day++) {
+    for (int hour = 0; hour < 24; hour++) {
       if (celsius[day][hour] > cutoff)
-        cout << "At day " << day << ","
+        cout << "At day " << day + 1 << ","
              << " hour " << hour << ","
              << " the temp was " << celsius[day][hour] << " C" << std::endl;
     }
@@ -84,8 +84,8 @@ void showWarmer(double celsius[][24], int days) {
 }
 double findAverage(double celsius[][24], int days) {
   double total = 0;
-  for (int day = 1; day <= days; day++) {
-    for (int hour = 1; hour <= 24; hour++) {
+  for (int day = 0; day < days; day++) {
+    for (int hour = 0; hour < 24; hour++) {
       total += celsius[day][hour];
     }
   }
@@ -96,7 +96,7 @@ void findDailyMaxMinMean(double dayTemps[], double &max, double &min,
   mean = 0;
   max = dayTemps[0];
   min = dayTemps[0];
-  for (int hour = 1; hour <= 23; hour++) {
+  for (int hour = 0; hour < 24; hour++) {
     if (max < dayTemps[hour]) {
       max = dayTemps[hour];
     }
