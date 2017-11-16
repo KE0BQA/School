@@ -3,7 +3,7 @@ program9.cpp
 Dyllan Uplinger
 J633V226
 Homework #09
-Bubble Sort (Dynamic Bubble Sort)
+Temperature Work (From File)
 Copyright 2017
 */
 
@@ -17,8 +17,8 @@ using std::cin;
 using std::cout;
 using std::ifstream;
 
-void input(double celsius[][24]);
-void convert(double celsius[][24]);
+void input(double celsius[][24], int days);
+void convert(double celsius[][24], int days);
 void showWarmer(double celsius[][24], int days);
 double findAverage(double celsius[][24], int days);
 void findDailyMaxMinMean(double dayTemps[], double &max, double &min,
@@ -27,22 +27,26 @@ void findDailyMaxMinMean(double dayTemps[], double &max, double &min,
 int main() {
   double celsius[7][24];
   int days = 7;
+  double mean, max, min;
 
   cout.setf(std::ios::fixed);
   cout.setf(std::ios::showpoint);
   cout.precision(2);
 
-  input(celsius);
-  convert(celsius);
+  input(celsius, days);
+  convert(celsius, days);
   showWarmer(celsius, days);
   cout << "The average temperature over all the days was: "
-       << findAverage(celsius, days);
-
-
+       << findAverage(celsius, days) << std::endl;
+  for (int day = 1; day <= days; day++) {
+    findDailyMaxMinMean(celsius[day], max, min, mean);
+    cout << "Day " << day << ": Max " << max << " C, Min " << min
+         << " C, Mean " << mean << " C" << std::endl;
+  }
   return 0;
 }
 
-void input(double celsius[][24]) {
+void input(double celsius[][24], int days) {
   ifstream fin;
   fin.open("temperature.dat");
   if (fin.fail()) {
@@ -50,7 +54,7 @@ void input(double celsius[][24]) {
     exit(1);
   }
   while (!(fin.eof())) {
-    for (int day = 1; day <= 7; day++) {
+    for (int day = 1; day <= days; day++) {
       for (int hour = 1; hour <= 24; hour++) {
         fin >> celsius[day][hour];
       }
@@ -58,8 +62,8 @@ void input(double celsius[][24]) {
     fin.close();
   }
 }
-void convert(double celsius[][24]) {
-  for (int day = 1; day <= 7; day++) {
+void convert(double celsius[][24], int days) {
+  for (int day = 1; day <= days; day++) {
     for (int hour = 1; hour <= 24; hour++) {
       celsius[day][hour] = ((celsius[day][hour] - 32) * 5 / 9);
     }
@@ -89,5 +93,17 @@ double findAverage(double celsius[][24], int days) {
 }
 void findDailyMaxMinMean(double dayTemps[], double &max, double &min,
                          double &mean) {
-
+  mean = 0;
+  max = dayTemps[0];
+  min = dayTemps[0];
+  for (int hour = 1; hour <= 23; hour++) {
+    if (max < dayTemps[hour]) {
+      max = dayTemps[hour];
+    }
+    if (min > dayTemps[hour]) {
+      min = dayTemps[hour];
+    }
+    mean += dayTemps[hour];
+  }
+  mean = mean / 24;
 }
