@@ -45,3 +45,6 @@
 /Program 9/Debug/Program 9.log
 /Program 9/Debug/Program 9.ilk
 /Program 9/Debug/Program 9.exe
+/Program 10/stdafx.cpp
+*.h
+/Program 10/.vs/Program 10/v15/.suo
