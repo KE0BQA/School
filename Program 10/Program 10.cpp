@@ -124,10 +124,16 @@ int postnetToRoman(const string p) {
 }
 void printRomanZip(const Zipcode zip) {
   string RomanZip;
+  for (int i = 0; i <= 5; i++) {
+    cout << RomanZip[i];
+  }
   // print Zip Code
 }
 void printPOSTNET(const Zipcode zip) {
   string POSTNET;
+  for (int i = 0; i <= 27; i++ ) {
+    cout << POSTNET[i];
+  }
   // print postnet 1 = long 0 = short
 }
 void writeToFile(const Zipcode zip) {
