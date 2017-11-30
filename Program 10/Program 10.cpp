@@ -12,7 +12,6 @@ Copyright 2017
 #include <iostream>
 #include <string>
 
-// using namespace std;
 using std::cin;
 using std::cout;
 using std::string;
@@ -20,27 +19,14 @@ using std::string;
 struct Zipcode {
   int romanZipcode;
   string postnetCode;
-  // Does not store the leading and trailing 1
 };
-// Accepts both roman and barcode formats, fills both struct members
+
 Zipcode fillZipcode(const string zip);
-// Conversion of roman zip code to bar code
 string romanToPOSTNET(const int r);
-// Conversion of bar code to roman zip code
 int postnetToRoman(const string p);
 void printRomanZip(const Zipcode zip);
 void printPOSTNET(const Zipcode zip);
-// Filename will be the roman zip, contents are graphical bar code
 void writeToFile(const Zipcode zip);
-/*
-  Argument is used to display appropriate prompt to user
-  Gets zip code from user
-  Creates and assigns to a Zipcode struct
-  Prints roman and graphical bar code to screen
-  Creates a file whose name is in the format ROMAN.txt where
-      ROMAN is the roman zip code, and the contents are the
-      graphical representation of the bar code
- */
 void processZip(int prompt);
 int main() {
   int mainMenu;
@@ -65,4 +51,73 @@ int main() {
     }
   } while (mainMenu != 3);
   return 0;
+}
+
+Zipcode fillZipcode(const string zip) {
+  Zipcode zip;
+  auto length = zip.length();
+  switch (length) {
+  case 5:
+    Zipcode.romanZipcode = stoi(zip);
+    Zipcode.postnetCode = romanToPOSTNET(stoi(zip));
+    break;
+  case 27:
+    Zipcode.postnetCode = zip;
+    Zipcode.romanZipcode = postnetToRoman(zip);
+    break;
+  }
+}
+string romanToPOSTNET(const int r)
+{
+  for (a[i]) {
+    if (i == 0) {
+      temp += "11000"
+    }
+    else if (i == 1) {
+      temp += "00001"
+    }
+  }
+  return string();
+}
+int postnetToRoman(const string p) {
+  int temp;
+  for (int i = 0; i < 26; i++) {
+    switch (p(i)) {
+    case 1:
+      switch (i % 5) {
+      case 1:
+        temp += 7;
+        break;
+      case 2:
+        temp += 4;
+        break;
+      case 3:
+        temp += 2;
+        break;
+      case 4:
+        temp += 1;
+        break;
+      }
+    }
+  }
+}
+void printRomanZip(const Zipcode zip) {
+  string RomanZip;
+
+}
+void printPOSTNET(const Zipcode zip) {
+  string POSTNET;
+}
+void writeToFile(const Zipcode zip) {
+
+}
+void processZip(int prompt) {
+  Zipcode structure;
+  string input;
+  if (prompt == 1)
+    cout << "Enter Zip:";
+  else
+    cout << "Enter Postnet:";
+  cin >> input;
+  structure = fillZipcode(input);
 }

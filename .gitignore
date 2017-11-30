@@ -48,3 +48,16 @@
 /Program 10/stdafx.cpp
 *.h
 /Program 10/.vs/Program 10/v15/.suo
+/Program 10/Debug/vc141.pdb
+/Program 10/Debug/vc141.idb
+/Program 10/Debug/stdafx.obj
+/Program 10/Debug/stdafx.nativecodeanalysis.xml
+/Program 10/Debug/Program 10.tlog/unsuccessfulbuild
+/Program 10/Debug/Program 10.tlog/Program 10.lastbuildstate
+/Program 10/Debug/Program 10.tlog/CL.write.1.tlog
+/Program 10/Debug/Program 10.tlog/CL.read.1.tlog
+/Program 10/Debug/Program 10.tlog/CL.command.1.tlog
+/Program 10/Debug/Program 10.pch.codeanalysisast
+/Program 10/Debug/Program 10.pch.codeanalysis
+/Program 10/Debug/Program 10.log
+/Program 10/Debug/Program 10.Build.CppClean.log
