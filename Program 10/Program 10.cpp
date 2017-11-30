@@ -54,82 +54,85 @@ int main() {
 }
 
 Zipcode fillZipcode(const string zip) {
-  Zipcode zip;
+  Zipcode temp;
   auto length = zip.length();
   switch (length) {
   case 5:
-    zip.romanZipcode = stoi(zip);
-    zip.postnetCode = romanToPOSTNET(stoi(zip));
+    temp.romanZipcode = stoi(zip);
+    temp.postnetCode = romanToPOSTNET(stoi(zip));
     break;
   case 27:
-    zip.postnetCode = zip;
-    zip.romanZipcode = postnetToRoman(zip);
+    temp.postnetCode = zip;
+    temp.romanZipcode = postnetToRoman(zip);
     break;
   }
+  return temp;
 }
 string romanToPOSTNET(const int r) {
   // Loop through Zip
   // Check Each Number
   // Convert to Postnet
-  string temp;
-  for (int i = 0; temp[i]; i++) {
+  string postnet;
+  for (int i = 0; postnet[i]; i++) {
     switch (i) {
     case 0:
-      temp += 11000;
+      postnet += 11000;
     case 1:
-      temp += 00011;
+      postnet += 00011;
     case 2:
-      temp += 00101;
+      postnet += 00101;
     case 3:
-      temp += 00110;
+      postnet += 00110;
     case 4:
-      temp += 01001;
+      postnet += 01001;
     case 5:
-      temp += 01010;
+      postnet += 01010;
     case 6:
-      temp += 01100;
+      postnet += 01100;
     case 7:
-      temp += 10001;
+      postnet += 10001;
     case 8:
-      temp += 10010;
+      postnet += 10010;
     case 9:
-      temp += 10100;
+      postnet += 10100;
     }
   }
-  return string();
+  return postnet;
 }
 int postnetToRoman(const string p) {
   // Remove 1st and last 1
   // Break into groups of 5
   // Convert to Roman
 
-  int temp;
-  for (int i = 0; i < 27; i++ )
-  if (i == 11000) {
-    temp += 0;
-  } else if (i == 00011) {
-    temp += 1;
-  } else if (i == 00101) {
-    temp += 2;
-  } else if (i == 00110) {
-    temp += 3;
-  } else if (i == 01001) {
-    temp += 4;
-  } else if (i == 01010) {
-    temp += 5;
-  } else if (i == 01100) {
-    temp += 6;
-  } else if (i == 10001) {
-    temp += 7;
-  } else if (i == 10010) {
-    temp += 8;
-  } else if (i == 10100) {
-    temp += 9;
+  string roman;
+  for (int i = 0; roman[i]; i++) {
+    switch (i) {
+    case 11000:
+      roman += 0;
+    case 00011:
+      roman += 1;
+    case 00101:
+      roman += 2;
+    case 00110:
+      roman += 3;
+    case 01001:
+      roman += 4;
+    case 01010:
+      roman += 5;
+    case 01100:
+      roman += 6;
+    case 10001:
+      roman += 7;
+    case 10010:
+      roman += 8;
+    case 10100:
+      roman += 9;
+    }
   }
+  return roman;
 }
 void printRomanZip(const Zipcode zip) {
   string RomanZip;
-  Zipcode(romanZipcode) = RomanZip;
   for (int i = 0; i <= 5; i++) {
     cout << RomanZip[i];
   }
@@ -147,7 +150,7 @@ void writeToFile(const Zipcode zip) {
 }
 void processZip(int prompt) {
   Zipcode structure;
-  string input = 0;
+  string input;
   if (prompt == 1) {
     cout << "Enter Zip:";
   } else {

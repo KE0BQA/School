@@ -62,3 +62,9 @@
 /Program 10/Debug/Program 10.log
 /Program 10/Debug/Program 10.Build.CppClean.log
 *.pch
+/Program 10/Debug/Program 10.tlog/link.write.1.tlog
+/Program 10/Debug/Program 10.tlog/link.read.1.tlog
+/Program 10/Debug/Program 10.tlog/link.command.1.tlog
+/Program 10/Debug/Program 10.pdb
+/Program 10/Debug/Program 10.ilk
+/Program 10/Debug/Program 10.exe
