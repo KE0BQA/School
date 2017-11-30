@@ -61,3 +61,4 @@
 /Program 10/Debug/Program 10.pch.codeanalysis
 /Program 10/Debug/Program 10.log
 /Program 10/Debug/Program 10.Build.CppClean.log
+*.pch
