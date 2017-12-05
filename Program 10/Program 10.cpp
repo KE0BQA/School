@@ -110,7 +110,6 @@ string romanToPOSTNET(const int r) {
 }
 int postnetToRoman(const string p) {
   string roman;
-  cout << p << std::endl;
   for (int i = 0; i < 5; i++) {
     string temp;
     if (temp == "11000") {
@@ -139,7 +138,6 @@ int postnetToRoman(const string p) {
 }
 void printRomanZip(const Zipcode zip) { cout << zip.romanZipcode << std::endl; }
 void printPOSTNET(const Zipcode zip) {
-  cout << zip.postnetCode << std::endl;
   cout << "|";
   for (int i = 0; i < 25; i++) {
     if (zip.postnetCode[i] == '1') {
@@ -156,13 +154,26 @@ void printPOSTNET(const Zipcode zip) {
 }
 void writeToFile(const Zipcode zip) {
   ofstream fout;
-  fout.open(zip.romanZipcode + ".txt");
+  fout.open(std::to_string(zip.romanZipcode) + ".txt");
   if (fout.fail()) {
     cout << "Failed to open output file. Exiting.... \n";
     exit(1);
   }
-  printPOSTNET;
+  fout << "|";
+  for (int i = 0; i < 25; i++) {
+    if (zip.postnetCode[i] == '1') {
+      fout << "|";
+    } else {
+      fout << " ";
+    }
+  }
+  fout << "|" << std::endl;
+  for (int i = 0; i < 27; i++) {
+    fout << "|";
+  }
   fout.close();
+  cout << "Your Zip Code was saved in " << zip.romanZipcode << ".txt"
+       << std::endl;
 }
 void processZip(int prompt) {
   Zipcode structure;
