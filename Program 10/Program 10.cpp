@@ -54,6 +54,7 @@ int main() {
 }
 
 Zipcode fillZipcode(const string zip) {
+  // Does not store leading or trailing 1
   Zipcode temp;
   auto length = zip.length();
   switch (length) {
@@ -61,7 +62,7 @@ Zipcode fillZipcode(const string zip) {
     temp.romanZipcode = stoi(zip);
     temp.postnetCode = romanToPOSTNET(stoi(zip));
     break;
-  case 25:
+  case 27:
     temp.postnetCode = zip;
     temp.romanZipcode = postnetToRoman(zip);
     break;
@@ -69,9 +70,6 @@ Zipcode fillZipcode(const string zip) {
   return temp;
 }
 string romanToPOSTNET(const int r) {
-  // Loop through Zip
-  // Check Each Number
-  // Convert to Postnet
   string postnet;
   string zip = std::to_string(r);
   for (int i = 0; i < 5; i++) {
@@ -129,18 +127,21 @@ int postnetToRoman(const string p) {
   }
   return stoi(roman);
 }
-void printRomanZip(const Zipcode zip) {
-  string RomanZip;
-  for (int i = 0; i <= 5; i++) {
-    cout << RomanZip[i];
-  }
-}
+void printRomanZip(const Zipcode zip) { cout << zip.romanZipcode << std::endl; }
 void printPOSTNET(const Zipcode zip) {
-  string POSTNET;
+  cout << "|";
   for (int i = 0; i <= 25; i++) {
-    cout << POSTNET[i];
+    if (zip.postnetCode[i] == '1') {
+      cout << "|";
+    } else {
+      cout << " ";
+    }
   }
-  // print postnet 1 = long 0 = short
+  cout << "|" << std::endl;
+  for (int i = 0; i <= 27; i++) {
+    cout << "|";
+  }
+  cout << std::endl;
 }
 void writeToFile(const Zipcode zip) {
   // Save file with name of Zip Code
@@ -150,12 +151,14 @@ void processZip(int prompt) {
   string input;
   if (prompt == 1) {
     cout << "Enter Zip:";
+    cin >> input;
   } else {
     cout << "Enter Postnet:";
+    cin >> input;
+    input.erase(0, 1);
+    input.erase(input.size() - 1);
   }
-  cin >> input;
   structure = fillZipcode(input);
-  printRomanZip;
-  printPOSTNET;
-  // cout << structure.postnetCode << std::endl << structure.romanZipcode << std::endl;
+  printRomanZip(structure);
+  printPOSTNET(structure);
 }
