@@ -14,6 +14,7 @@ Copyright 2017
 
 using std::cin;
 using std::cout;
+using std::ofstream;
 using std::string;
 
 struct Zipcode {
@@ -154,7 +155,14 @@ void printPOSTNET(const Zipcode zip) {
   cout << std::endl;
 }
 void writeToFile(const Zipcode zip) {
-  // Save file with name of Zip Code
+  ofstream fout;
+  fout.open(zip.romanZipcode + ".txt");
+  if (fout.fail()) {
+    cout << "Failed to open output file. Exiting.... \n";
+    exit(1);
+  }
+  printPOSTNET;
+  fout.close();
 }
 void processZip(int prompt) {
   Zipcode structure;
@@ -170,4 +178,5 @@ void processZip(int prompt) {
   structure = fillZipcode(input);
   printRomanZip(structure);
   printPOSTNET(structure);
+  writeToFile(structure);
 }
