@@ -61,7 +61,7 @@ Zipcode fillZipcode(const string zip) {
     temp.romanZipcode = stoi(zip);
     temp.postnetCode = romanToPOSTNET(stoi(zip));
     break;
-  case 27:
+  case 25:
     temp.postnetCode = zip;
     temp.romanZipcode = postnetToRoman(zip);
     break;
@@ -112,7 +112,6 @@ int postnetToRoman(const string p) {
   cout << p << std::endl;
   for (int i = 0; i < 5; i++) {
     string temp;
-    temp = p.substr(5 * i, 5);
     if (temp == "11000") {
       roman += '0';
     } else if (temp == "00011") {
@@ -170,5 +169,5 @@ void processZip(int prompt) {
   }
   structure = fillZipcode(input);
   printRomanZip(structure);
-  // printPOSTNET(structure);
+  printPOSTNET(structure);
 }
