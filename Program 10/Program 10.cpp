@@ -7,7 +7,7 @@ Postal Code
 Copyright 2017
 */
 
-//#include "stdafx.h"
+#include "stdafx.h"
 #include <fstream>
 #include <iostream>
 #include <string>
@@ -15,6 +15,7 @@ Copyright 2017
 using std::cin;
 using std::cout;
 using std::ofstream;
+using std::stoi;
 using std::string;
 
 struct Zipcode {
@@ -55,19 +56,19 @@ int main() {
 }
 
 Zipcode fillZipcode(const string zip) {
-  Zipcode temp;
+  Zipcode fill;
   auto length = zip.length();
   switch (length) {
   case 5:
-    temp.romanZipcode = stoi(zip);
-    temp.postnetCode = romanToPOSTNET(stoi(zip));
+    fill.romanZipcode = stoi(zip);
+    fill.postnetCode = romanToPOSTNET(stoi(zip));
     break;
   case 25:
-    temp.postnetCode = zip;
-    temp.romanZipcode = postnetToRoman(zip);
+    fill.postnetCode = zip;
+    fill.romanZipcode = postnetToRoman(zip);
     break;
   }
-  return temp;
+  return fill;
 }
 string romanToPOSTNET(const int r) {
   string postnet;
@@ -111,30 +112,32 @@ string romanToPOSTNET(const int r) {
 int postnetToRoman(const string p) {
   string roman;
   for (int i = 0; i < 5; i++) {
-    string temp;
-    if (temp == "11000") {
+    string breakDown;
+    breakDown = p.substr(5 * i, 5);
+    if (breakDown == "11000") {
       roman += '0';
-    } else if (temp == "00011") {
+    } else if (breakDown == "00011") {
       roman += '1';
-    } else if (temp == "00101") {
+    } else if (breakDown == "00101") {
       roman += '2';
-    } else if (temp == "00110") {
+    } else if (breakDown == "00110") {
       roman += '3';
-    } else if (temp == "01001") {
+    } else if (breakDown == "01001") {
       roman += '4';
-    } else if (temp == "01010") {
+    } else if (breakDown == "01010") {
       roman += '5';
-    } else if (temp == "01100") {
+    } else if (breakDown == "01100") {
       roman += '6';
-    } else if (temp == "10001") {
+    } else if (breakDown == "10001") {
       roman += '7';
-    } else if (temp == "10010") {
+    } else if (breakDown == "10010") {
       roman += '8';
-    } else if (temp == "10100") {
+    } else if (breakDown == "10100") {
       roman += '9';
+      cout << roman << std::endl;
     }
   }
-  return std::stoi(roman);
+  return stoi(roman);
 }
 void printRomanZip(const Zipcode zip) { cout << zip.romanZipcode << std::endl; }
 void printPOSTNET(const Zipcode zip) {
@@ -153,25 +156,11 @@ void printPOSTNET(const Zipcode zip) {
   cout << std::endl;
 }
 void writeToFile(const Zipcode zip) {
-  ofstream fout;
-  fout.open(std::to_string(zip.romanZipcode) + ".txt");
-  if (fout.fail()) {
-    cout << "Failed to open output file. Exiting.... \n";
-    exit(1);
-  }
-  fout << "|";
-  for (int i = 0; i < 25; i++) {
-    if (zip.postnetCode[i] == '1') {
-      fout << "|";
-    } else {
-      fout << " ";
-    }
-  }
-  fout << "|" << std::endl;
-  for (int i = 0; i < 27; i++) {
-    fout << "|";
-  }
-  fout.close();
+  string filename = std::to_string(zip.romanZipcode) + ".txt";
+  ofstream outFile(filename);
+  outFile << zip.romanZipcode << std::endl;
+  outFile << zip.postnetCode << std::endl;
+  outFile.close();
   cout << "Your Zip Code was saved in " << zip.romanZipcode << ".txt"
        << std::endl;
 }
