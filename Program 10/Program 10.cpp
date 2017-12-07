@@ -139,9 +139,11 @@ int postnetToRoman(const string p) {
   }
   return stoi(roman);
 }
-void printRomanZip(const Zipcode zip) { cout << zip.romanZipcode << std::endl; }
+void printRomanZip(const Zipcode zip) {
+  cout << "Your zip code is " << zip.romanZipcode
+       << ", and the bar code looks like this: " << std::endl;
+}
 void printPOSTNET(const Zipcode zip) {
-  cout << "Your zip code is " << printRomanZip << ", and the bar code looks like this: " << std::endl;
   cout << "|";
   for (int i = 0; i < 25; i++) {
     if (zip.postnetCode[i] == '1') {
