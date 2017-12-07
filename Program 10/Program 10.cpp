@@ -134,7 +134,6 @@ int postnetToRoman(const string p) {
       roman += '8';
     } else if (breakDown == "10100") {
       roman += '9';
-      cout << roman << std::endl;
     }
   }
   return stoi(roman);
