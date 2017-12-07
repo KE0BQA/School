@@ -158,8 +158,18 @@ void printPOSTNET(const Zipcode zip) {
 void writeToFile(const Zipcode zip) {
   string filename = std::to_string(zip.romanZipcode) + ".txt";
   ofstream outFile(filename);
-  outFile << zip.romanZipcode << std::endl;
-  outFile << zip.postnetCode << std::endl;
+  outFile << "|";
+  for (int i = 0; i < 25; i++) {
+    if (zip.postnetCode[i] == '1') {
+      outFile << "|";
+    } else {
+      outFile << " ";
+    }
+  }
+  outFile << "|" << std::endl;
+  for (int i = 0; i < 27; i++) {
+    outFile << "|";
+  }
   outFile.close();
   cout << "Your Zip Code was saved in " << zip.romanZipcode << ".txt"
        << std::endl;
@@ -168,10 +178,10 @@ void processZip(int prompt) {
   Zipcode structure;
   string input;
   if (prompt == 1) {
-    cout << "Enter Zip:";
+    cout << "Enter a zip code in roman format (#####): ";
     cin >> input;
   } else {
-    cout << "Enter Postnet:";
+    cout << "Enter a zip code in bar code format(1’s and 0’s) : ";
     cin >> input;
     input = input.substr(1, 25);
   }
