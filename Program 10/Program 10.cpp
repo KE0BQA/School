@@ -7,7 +7,7 @@ Postal Code
 Copyright 2017
 */
 
-#include "stdafx.h"
+//#include "stdafx.h"
 #include <fstream>
 #include <iostream>
 #include <string>
@@ -134,7 +134,7 @@ int postnetToRoman(const string p) {
       roman += '9';
     }
   }
-  return stoi(roman);
+  return std::stoi(roman);
 }
 void printRomanZip(const Zipcode zip) { cout << zip.romanZipcode << std::endl; }
 void printPOSTNET(const Zipcode zip) {
