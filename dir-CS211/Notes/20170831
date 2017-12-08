@@ -1,0 +1,70 @@
+Some More C++ Basics
+	Finish Chapter 2
+	First Homework is assigned (Due Tuesday 20170905)
+	
+	Agenda
+		Flow of Control
+		Program Style
+
+	Flow of Control
+		Different actions based on input
+		Demo
+			if (BOOLEAN_EXPRESSION)
+				[Statement]
+			else
+				[Statement]
+		Else is not required
+		Compound Statements
+		{
+		}
+		Treated as single statment
+
+		while loop
+				while (BOOLEAN_EXPRESSION)
+					{
+					[Statement(s)]
+					}	
+			Boolean expression evaluated
+			if true brackets executed
+			repeats till false
+		do while loop
+				do {
+					[Statement(s)]
+				} while(boolean_expression);
+	Style
+		Mean by style
+			How it looks
+		Hard to read already
+			That of other people
+			Your own code later that day
+			Write code that can be understood
+		Generally Universal Standerds
+
+		Whitespace
+			Compilers don't care
+			We do
+				Proper identation
+				Seperatiing code into logical groups
+				Proper Indentation is part of homework grade
+		Comments
+			Properly done makes easier to understand
+			Overly verbose/frequent
+				Harder to read
+			Requirements lean toward a higher freq of comments
+				Show understanding of what you wrote
+				Blocks should have discriptive comment
+		Naming
+			Very long/easy way to making code understandable
+			Variable names should be descriptive object names
+			Function name should have an action word
+			Choosing good names can be harder than it seems
+		Constants
+			Need to work w/ specific numbers sometimes
+			To avoid confusion we can name the number
+				All Caps ie (NUM_BRANCHES)
+		Consistency
+			Naming
+			Indentation
+			Brace Placement
+
+		
