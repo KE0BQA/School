@@ -1,0 +1,163 @@
+---
+title: "Chem 211"
+author: "Dyllan Uplinger"
+mainfont: Roboto Light
+fontsize: 12pt
+geometry: margin = 1in
+header-includes:
+- \usepackage{placeins}
+- \usepackage{setspace}
+- \usepackage{chngcntr}
+- \onehalfspacing
+- \counterwithin{figure}{section}
+- \counterwithin{table}{section}
+output:
+  html_notebook:
+    toc: yes
+---
+
+#Chapter 1
+Chemistry: The Science of Change
+
+##1.1 The Study of Chemistry
+Chemistry is the branch of science that deals with the identification of the substances of which matter is composed; the investigation of their properties and the ways in which they interact, combine, and change; and the use of these processes to form new substances.
+
+Matter is a physical substance in general, as distinct from mind and spirit; (in physics) that which occupies space and possesses rest mass, especially as distinct from energy: 
+
+###Scientific Method
+* Ask a Question: The scientific method starts when you ask a question about something that you observe: How, What, When, Who, Which, Why, or Where?
+
+* Construct a Hypothesis: A hypothesis is an educated guess about how things work. It is an attempt to answer your question with an explanation that can be tested.
+
+* Test Your Hypothesis by Doing an Experiment: Your experiment tests whether your prediction is accurate and thus your hypothesis is supported or not. It is important for your experiment to be a fair test. You conduct a fair test by making sure that you change only one factor at a time while keeping all other conditions the same.
+
+* Analyze Your Data and Draw a Conclusion: Once your experiment is complete, you collect your measurements and analyze them to see if they support your hypothesis or not. 
+
+* Communicate Your Results
+
+##1.2 Classification of Matter
+###Substances
+Substance is a form of matter with definite composition and distinct properties.
+
+Every pure element is a substance.
+
+Every pure compound is a substance.
+
+    Examples Include: salt (sodium chloride), iron, water, mercury, carbon dioxide, oxygen
+
+Substances differ from one another in composition and may be identified by appearance, smell, taste, and other properties.
+
+###Mixtures
+Mixture is a physical combination of multiple substances.
+
+* Mixtures are unlike Chemical Compounds:
+    + Substances in a mixture can be separated using physical methods such as filtration, freezing, and distillation.
+    + There is little or no energy change when a mixture forms.
+    + Mixtures have variable compositions, while compounds have a fixed, definite formula.
+    + When mixed, individual substances keep their properties in a mixture, while if they form a compound their properties can change.
+
+Homogeneous mixture is a mixture which has uniform composition and properties throughout
+
+    Examples: any gases at equilibrium in a closed space; the hydrocarbons in gasoline; 
+    a sugar solution in water at equilibrium; 
+    Vinegar Dissolved in Water; Seawater; Apple Juice
+    
+Heterogeneous mixture is a mixture that does not have uniform composition and properties throughout. 
+
+    Examples: Trail Mix and Chicken Noodle Soup
+
+###States of Matter
+* Substances exist as a:
+    + Solid
+        + Its volume is fixed; it will not expand to fill a container - Unlike gases and plasmas
+        + Most solids are incompressible - their volume hardly changes when pressure changes - Unlike gases and plasmas
+        + Solids are not fluids, so they cannot flow. Their shapes do not adapt to that of their containers - Unlike liquids, gases, and plasmas
+        + Solids are condensed matter, so their volumes are similar to those of liquids, and much smaller than gases and plasmas
+    + Liquid
+        + Its volume is fixed; It will not expand to fill a container - Unlike gases and plasmas
+        + Most liquids are incompressible - Their volume hardly changes when pressure changes - Unlike gases and plasmas
+        + Liquids are fluids, so they can flow. Provided there is gravity, their shapes adapt to that of their containers - Unlike solids
+        + Liquids are condensed matter, so their volumes are similar to those of solids, and much smaller than gases and plasmas
+    + Gas
+        + Its volume is not fixed; It will expand to fill a container
+        + It is compressible - Its volume changes when pressure changes
+        + Gases are fluids, so they can flow. Their shapes adapt to that of their containers
+        + The atoms or molecules in a gas are spread much more thinly than the particles in solids and liquids.
+
+They can change from one state to another without changing the chemical identities
+
+##1.3 Properties of Matter
+
+###Quantative Properties
+Exists in a range of magnitudes, and can therefore be measured with a number. Measurements of any particular quantitative property are expressed as a specific quantity, referred to as a unit, multiplied by a number.
+      
+###Qualitative Properties
+Properties that are observed and can generally not be measured with a numerical result. 
+      
+###Physical Properties
+A property that can be measured without changing the chemical composition of a substance.
+
+    Examples: Color, Melting/Boint Point, Young's Modulus, Sheer Modulus
+    
+###Physical Change
+Usually reversible change in the physical properties of a substance, as size or shape
+    
+    Examples: Freezing, Melting, Condensing, Subliming
+    
+###Chemical Properties
+Property or characteristic of a substance that is observed during a reaction in which the chemical composition or identity of the substance is changed
+
+    Examples: Flammability, Corrosiveness
+    
+###Chemical Changes
+Usually irreversible chemical reaction involving the rearrangement of the atoms of one or more substances and a change in their chemical properties or composition, resulting in the formation of at least one new substance
+
+    Examples: Digestion, Combustion, Oxidation
+
+###Extensive Properties
+A property that depends upon the amount of material in a sample.
+
+    Examples: Mass; Volume; Size, Weight, Length
+
+###Intensive Properties
+A property that does not depend upon the amount of material in a sample.
+
+    Examples: Temperature; Density; Specific Gravity; Molality, Boiling/Melting Point; Odor
+
+##1.4 Scientific Measurement
+Measureable Properties are Quantitative and must include a unit
+
+English System Has units such as feet(ft), gallons(gal) and pounds(lbs) (Not typically used outside of the US)
+
+Metric system is used much more common and includes units such as the metere (m), liters(L), and kilgrams(kg)
+
+###SI Base Units
+Current Metric System
+
+Base Quantity       Name      Symbol
+----------------    ----      ------
+Length              Meter     m
+Mass                Kilogram  kg
+Time                Second    s
+Electric Current    Ampere    A
+Temperature         Kelvin    K
+Amount of Substance Mole      mol
+Luminous Intesity   Candela   cd
+
+Prefix  Symbol   Meaning       Example
+------  ---      -----------   ---
+Tera-    T       $1x10^{12}$
+Giga-    G       $1x10^9$
+Mega-    M       $1x10^6$
+Kilo-    k       $1x10^3$
+Deci-    d       $1x10^{-1}$
+Centi-   c       $1x10^{-2}$
+Milli-   m       $1x10^{-3}$
+Micro-   ?       $1x10^{-6}$
+Nano-    n       $1x10^{-9}$
+Pico-    p       $1x10^{-12}$
+
+##1.5 Uncertainty in Measurement
+##1.6 Using Units and Solving Problems
+
+#Chapter 2
