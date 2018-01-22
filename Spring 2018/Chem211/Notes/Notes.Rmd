@@ -1,5 +1,6 @@
 ---
 title: "Chem 211"
+subtitle: "General Chemistry"
 author: "Dyllan Uplinger"
 mainfont: Roboto Light
 fontsize: 12pt

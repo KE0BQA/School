@@ -1,0 +1,18 @@
+---
+title: "CS238"
+subtitle: "Assembly Language"
+author: "Dyllan Uplinger"
+mainfont: Roboto Light
+fontsize: 12pt
+geometry: margin = 1in
+header-includes:
+- \usepackage{placeins}
+- \usepackage{setspace}
+- \usepackage{chngcntr}
+- \onehalfspacing
+- \counterwithin{figure}{section}
+- \counterwithin{table}{section}
+output:
+  html_notebook:
+    toc: yes
+---
