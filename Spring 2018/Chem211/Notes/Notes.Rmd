@@ -1,20 +1,17 @@
 ---
-title: "Chem 211"
-subtitle: "General Chemistry"
+title: "Chem211"
+subtitle: General Chemistry
 author: "Dyllan Uplinger"
-mainfont: Roboto Light
-fontsize: 12pt
 geometry: margin = 1in
-header-includes:
-- \usepackage{placeins}
-- \usepackage{setspace}
-- \usepackage{chngcntr}
-- \onehalfspacing
-- \counterwithin{figure}{section}
-- \counterwithin{table}{section}
 output:
-  html_notebook:
+  pdf_document:
     toc: yes
+    highlight: zenburn
+mainfont: Arial
+fontsize: 12pt
+latex_engine: xelatex
+header-includes:
+   - \usepackage{chemfig}
 ---
 
 #Chapter 1
@@ -154,11 +151,37 @@ Kilo-    k       $1x10^3$
 Deci-    d       $1x10^{-1}$
 Centi-   c       $1x10^{-2}$
 Milli-   m       $1x10^{-3}$
-Micro-   ?       $1x10^{-6}$
+Micro-   µ       $1x10^{-6}$
 Nano-    n       $1x10^{-9}$
 Pico-    p       $1x10^{-12}$
 
-##1.5 Uncertainty in Measurement
+###Mass
+* Kilogram (kg)
+    + 1000g = 1kg
+* Gram (g)
+* Atomic Mass Unit (amu)
+
+###Temperature
+* Celsius (°C)
+* Kelvin (°K)
+    + $K=C+273.15$ 
+* Farenheit (°F)
+    + $F=(\frac{9}{5} * C)+32$
+    
+###Derived Units
+* Density
+    + $Density = \frac{Mass}{Volume}$
+* Volume
+    + $Volume = \frac{Mass}{Density}$
+    
+##1.5 Uncertainty in Measurement\
+
+###Accuracy
+###Precision
+    + 
+
 ##1.6 Using Units and Solving Problems
 
 #Chapter 2
+
+#Reference
