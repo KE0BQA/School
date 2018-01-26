@@ -12,6 +12,9 @@ header-includes:
 - \usepackage{placeins}
 - \usepackage{setspace}
 - \usepackage{chngcntr}
+- \usepackage{pgf,tikz}
+- \usepackage{mathrsfs}
+- \usetikzlibrary{arrows}
 - \onehalfspacing
 - \counterwithin{figure}{section}
 - \counterwithin{table}{section}
@@ -19,6 +22,7 @@ fontsize: 12pt
 ---
 
 #Chapter 1
+\definecolor{sexdts}{rgb}{0.1803921568627451,0.49019607843137253,0.19607843137254902}\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]\draw [color=cqcqcq,, xstep=1cm,ystep=2cm] (-9.86,-14.512143000000004) grid (9.86,14.512143000000004);\draw[->,color=black] (-9.86,0) -- (9.86,0);\foreach \x in {-9,-8,-7,-6,-5,-4,-3,-2,-1,1,2,3,4,5,6,7,8,9}\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};\draw[->,color=black] (0,-14.512143000000004) -- (0,14.512143000000004);\foreach \y in {-14,-12,-10,-8,-6,-4,-2,2,4,6,8,10,12,14}\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};\clip(-9.86,-14.512143000000004) rectangle (9.86,14.512143000000004);\draw[line width=2pt,color=sexdts,smooth,samples=100,domain=-9.860000000000001:9.860000000000001] plot(\x,{(\x)});\end{tikzpicture}
 
 #Reference
 ##Unit Circle

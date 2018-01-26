@@ -7,6 +7,8 @@ output:
   pdf_document:
     toc: yes
     highlight: zenburn
+  html_notebook:
+    toc: yes
 mainfont: Arial
 fontsize: 12pt
 latex_engine: xelatex
@@ -151,34 +153,78 @@ Kilo-    k       $1x10^3$
 Deci-    d       $1x10^{-1}$
 Centi-   c       $1x10^{-2}$
 Milli-   m       $1x10^{-3}$
-Micro-   Âµ       $1x10^{-6}$
+Micro-   µ       $1x10^{-6}$
 Nano-    n       $1x10^{-9}$
 Pico-    p       $1x10^{-12}$
 
-###Mass
-* Kilogram (kg)
-    + 1000g = 1kg
-* Gram (g)
-* Atomic Mass Unit (amu)
+\pagebreak
 
+###Mass
+Mass is a measure of the amount of matter in an object. Mass is usually measured in grams (g) or kilograms (kg).
+
+Mass measures the quantity of matter regardless of both its location in the universe and the gravitational force applied to it. An object's mass is constant in all circumstances; contrast this with its weight, a force that depends on gravity.
+
+Your mass on the earth and the moon are identical. Your weight on the moon is about one-sixth of your weight on the earth. 
+
+* Kilogram (kg)
+    + The kilogram is the SI unit for mass
+    + $1000 g = 1 kg$
+* Gram (g)
+    + In Chemistry it is more common for the gram to be used
+    + $1 g = \frac{1}{1000}kg$
+* Atomic Mass Unit (amu)
+    + AMU is used to express that mass of atoms and molecules
+    + $1 amu = 1.6605x10^{-24}g$
+    
 ###Temperature
-* Celsius (Â°C)
-* Kelvin (Â°K)
-    + $K=C+273.15$ 
-* Farenheit (Â°F)
-    + $F=(\frac{9}{5} * C)+32$
+* Celsius (°C)
+    + Freezing Point: 0
+    + Boiling Point: 100
+* Kelvin (°K) "Absolute Scale"
+    + $K=C+273.15$
+    + Lowest Possible Temperature is 0K (This is absolute zero)
+    + Absoulte 0 is a therotical limit and has not bene achieved but have gotten close to.
+* Farenheit (°F)
+    + $F = (\frac{9}{5} * C)+32$
+    + Freezing Point: 32
+    + Boiling Point: 212
+    
+\pagebreak    
     
 ###Derived Units
+Many quantities require units not included in the base SI units, such as; Voume and Density
+
 * Density
+    + Density is the ratio of mass to volume
+    + The SI unit is Kilogram per cubic meter ($\frac{kg}{m^3}$)
     + $Density = \frac{Mass}{Volume}$
+    + Other Common units include; 
+        + $\frac{g}{cm^3}$  (solids)
+        + $\frac{g}{mL}$     (liquids)
+        + $\frac{g}{L}$      (gases)
 * Volume
+    + The derived SI unit for volume is the meter cubed $m^3$
+    + The more practical unit is the liter(L)
     + $Volume = \frac{Mass}{Density}$
+    + $1 dm^3 = 1 L$
+    + $1 cm^3 = 1 mL$
     
-##1.5 Uncertainty in Measurement\
+##1.5 Uncertainty in Measurement
 
 ###Accuracy
+Tells how close a measurement is to the true value
+
 ###Precision
-    + 
+Tells how close a series of replicae measurements are to each other
+    + Precision is the same as reproducibility
+    
+###Types of Numbers
+  * Exact:
+    + Have Defined Values
+  * Inexact
+    + Measure by any method besides counting
+      
+###Signifigant Figues
 
 ##1.6 Using Units and Solving Problems
 
