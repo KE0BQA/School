@@ -16,6 +16,8 @@ header-includes:
    - \usepackage{chemfig}
 ---
 
+\pagebreak
+
 #Chapter 1
 Chemistry: The Science of Change
 
@@ -153,7 +155,7 @@ Kilo-    k       $1x10^3$
 Deci-    d       $1x10^{-1}$
 Centi-   c       $1x10^{-2}$
 Milli-   m       $1x10^{-3}$
-Micro-   µ       $1x10^{-6}$
+Micro-   ?       $1x10^{-6}$
 Nano-    n       $1x10^{-9}$
 Pico-    p       $1x10^{-12}$
 
@@ -177,14 +179,14 @@ Your mass on the earth and the moon are identical. Your weight on the moon is ab
     + $1 amu = 1.6605x10^{-24}g$
     
 ###Temperature
-* Celsius (°C)
+* Celsius (?C)
     + Freezing Point: 0
     + Boiling Point: 100
-* Kelvin (°K) "Absolute Scale"
+* Kelvin (?K) "Absolute Scale"
     + $K=C+273.15$
     + Lowest Possible Temperature is 0K (This is absolute zero)
     + Absoulte 0 is a therotical limit and has not bene achieved but have gotten close to.
-* Farenheit (°F)
+* Farenheit (?F)
     + $F = (\frac{9}{5} * C)+32$
     + Freezing Point: 32
     + Boiling Point: 212
@@ -229,5 +231,18 @@ Tells how close a series of replicae measurements are to each other
 ##1.6 Using Units and Solving Problems
 
 #Chapter 2
+##Atoms First
+##Subatomic Particles and Atmoic Structure
+###Discovery of the Electron
+###Radioactivity
+###The Proton and the Nuclear Model of the Atom
+###The Neutron
+##Atomic Number, Mass Number, and Isotopes
+##Average Atomic Mass
+##The Periodic Table
+##The Mole and Molar 
+###The Mole
+###Molar Mass
+###Interconverting Mass, Moles. and Nummbers of Atoms
 
 #Reference
